@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CrudUsuarios.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Templates\Template_Crud\css\main.css" />
     <Content Include="Templates\Template_Crud\css\util.css" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -238,10 +239,25 @@
     <Compile Include="CrudUsuarios.aspx.designer.cs">
       <DependentUpon>CrudUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.Master.cs">
+      <DependentUpon>LoginPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Master.designer.cs">
+      <DependentUpon>LoginPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CrudPageUsuario.Master" />
+    <Content Include="LoginPage.Master" />
     <None Include="packages.config" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />

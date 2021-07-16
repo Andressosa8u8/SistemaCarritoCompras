@@ -9,24 +9,24 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="Templates/Template_Login/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/css-hamburgers/hamburgers.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/animsition/css/animsition.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/select2/select2.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/css/util.css"/>
-	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Templates/Template_Login/css/main.css">
 <!--===============================================================================================-->
 <asp:ContentPlaceHolder ID="cph_cabecera" runat="server"></asp:ContentPlaceHolder>
 </head>

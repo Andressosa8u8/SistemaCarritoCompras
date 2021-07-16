@@ -44,7 +44,7 @@
                 <asp:Button class="contact100-form-btn" ID="btn_registrar" runat="server" Text="Ingresar" />
             </div>
             <div class="container-contact100-form-btn">
-                <asp:Button class="contact100-form-btn" runat="server" Text="Cancelar"  />
+                <asp:Button class="contact100-form-btn" ID="btn_cancelar" runat="server" Text="Cancelar" OnClick="btn_cancelar_Click"/>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

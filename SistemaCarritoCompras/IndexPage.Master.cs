@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace SistemaCarritoCompras
 {
-    public partial class CrudUsuarios : System.Web.UI.Page
+    public partial class IndexPage : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Login.aspx");
         }
     }
 }

@@ -22,7 +22,7 @@
                 </div>
                     <br />
                 <div class="container-login100-form-btn m-t-20">
-                    <asp:Button ID="btn_ingresar" CssClass="login100-form-btn" runat="server" Text="Iniciar Sesion"/>
+                    <asp:Button ID="btn_ingresar" CssClass="login100-form-btn" runat="server" Text="Iniciar Sesion" OnClick="btn_ingresar_Click"/>
                 </div>
 
                 <div class="container-login100-form-btn m-t-30">

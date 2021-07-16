@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrudUsuarios.aspx" />
     <Content Include="Templates\Template_Crud\css\main.css" />
     <Content Include="Templates\Template_Crud\css\util.css" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -223,9 +224,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrudPageUsuario.Master.cs">
+      <DependentUpon>CrudPageUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrudPageUsuario.Master.designer.cs">
+      <DependentUpon>CrudPageUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CrudUsuarios.aspx.cs">
+      <DependentUpon>CrudUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrudUsuarios.aspx.designer.cs">
+      <DependentUpon>CrudUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrudPageUsuario.Master" />
     <None Include="packages.config" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Templates\Template_Crud\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />

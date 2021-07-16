@@ -13,5 +13,10 @@ namespace SistemaCarritoCompras
         {
 
         }
+
+        protected void btn_ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

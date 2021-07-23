@@ -60,7 +60,7 @@
             </div>
             <div class="wrapper row3">
                 <main class="hoc container clear">
-                    <h5>LISTADO DE Usuarios</h5>
+                    <h5>LISTADO DE USUARIOS</h5>
                     <div class="content">
                         <div id="comments">
                             <div>

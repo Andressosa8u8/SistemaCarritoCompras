@@ -37,6 +37,8 @@
                                         <li><a href="CrudProveedores.aspx">Proveedores</a></li>
                                         <li><a href="CrudProductos.aspx">Productos</a></li>
                                         <li><a href="CrudClientes.aspx">Clientes</a></li>
+                                        <li><a href="CrudRoles.aspx">Roles</a></li>
+                                        <li><a href="CrudCategorias.aspx">Categorias</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="drop">Ventas</a>
@@ -52,7 +54,7 @@
                 <div id="breadcrumb" class="hoc clear">
                     <h6 class="heading">Mantenimientos</h6>
                     <ul>
-                        <li><a href="CrudUsuarios.aspx">Clientes</a></li>
+                        <li><a href="CrudUsuarios.aspx">Usuarios</a></li>
                     </ul>
                 </div>
             </div>

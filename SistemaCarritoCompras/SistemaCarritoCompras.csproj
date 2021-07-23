@@ -224,9 +224,11 @@
     <Content Include="Templates\Template_Principal\layout\styles\index.html" />
     <Content Include="Templates\Template_Principal\layout\styles\layout.css" />
     <Content Include="Templates\Template_Principal\pages\Contactenos.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudCategorias.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudClientes.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudProductos.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudProveedores.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudRoles.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -281,6 +283,13 @@
     <Compile Include="Templates\Template_Principal\pages\Contactenos.aspx.designer.cs">
       <DependentUpon>Contactenos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudCategorias.aspx.cs">
+      <DependentUpon>CrudCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudCategorias.aspx.designer.cs">
+      <DependentUpon>CrudCategorias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Templates\Template_Principal\pages\CrudClientes.aspx.cs">
       <DependentUpon>CrudClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,6 +310,13 @@
     </Compile>
     <Compile Include="Templates\Template_Principal\pages\CrudProveedores.aspx.designer.cs">
       <DependentUpon>CrudProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudRoles.aspx.cs">
+      <DependentUpon>CrudRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudRoles.aspx.designer.cs">
+      <DependentUpon>CrudRoles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\Template_Principal\pages\CrudUsuarios.aspx.cs">
       <DependentUpon>CrudUsuarios.aspx</DependentUpon>

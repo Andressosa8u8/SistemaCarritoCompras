@@ -51,6 +51,24 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.pages
         protected global::System.Web.UI.WebControls.TextBox txt_precio;
 
         /// <summary>
+        /// Control txt_prov.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_prov;
+
+        /// <summary>
+        /// Control txt_cate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_cate;
+
+        /// <summary>
         /// Control btn_guardar.
         /// </summary>
         /// <remarks>

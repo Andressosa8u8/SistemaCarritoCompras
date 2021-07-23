@@ -38,6 +38,8 @@
                                         <li><a href="CrudProveedores.aspx">Proveedores</a></li>
                                         <li><a href="CrudProductos.aspx">Productos</a></li>
                                         <li><a href="CrudClientes.aspx">Clientes</a></li>
+                                        <li><a href="CrudRoles.aspx">Roles</a></li>
+                                        <li><a href="CrudCategorias.aspx">Categorias</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="drop">Ventas</a>
@@ -73,6 +75,14 @@
                                 <div class="one_third">
                                     <label>Precio <span>*</span></label>
                                     <asp:TextBox ID="txt_precio" runat="server" size="22"></asp:TextBox>
+                                </div>
+                                <div class="one_third">
+                                    <label>Proveedor <span>*</span></label>
+                                    <asp:TextBox ID="txt_prov" runat="server" size="22"></asp:TextBox>
+                                </div>
+                                <div class="one_third first">
+                                    <label>Categoria <span>*</span></label>
+                                    <asp:TextBox ID="txt_cate" runat="server" size="22"></asp:TextBox>
                                 </div>
                                 <div>
                                     <asp:Button ID="btn_guardar" runat="server" Text="Guardar" CssClass="btn btn-primary one_third first" />

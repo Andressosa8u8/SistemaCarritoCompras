@@ -11,7 +11,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.pages
 {
 
 
-    public partial class CrudClientes1
+    public partial class CrudRoles
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.pages
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control hdf_clientesId.
+        /// Control hdf_rolesId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdf_clientesId;
+        protected global::System.Web.UI.WebControls.HiddenField hdf_rolesId;
 
         /// <summary>
         /// Control txt_nombres.
@@ -49,51 +49,6 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_nombres;
-
-        /// <summary>
-        /// Control txt_apellidos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_apellidos;
-
-        /// <summary>
-        /// Control txt_cedula.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_cedula;
-
-        /// <summary>
-        /// Control txt_telefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_telefono;
-
-        /// <summary>
-        /// Control txt_direccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_direccion;
-
-        /// <summary>
-        /// Control txt_correo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_correo;
 
         /// <summary>
         /// Control btn_guardar.

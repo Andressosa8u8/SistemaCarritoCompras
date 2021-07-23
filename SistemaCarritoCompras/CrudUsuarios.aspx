@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido2" runat="server">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <span class="contact100-form-title">Formulario de ingreso de usuarios
+            <span class="contact100-form-title">Formulario de usuarios
             </span>
             <div class="wrap-input100 validate-input bg1">
                 <span class="label-input100">NOMBRE: </span>

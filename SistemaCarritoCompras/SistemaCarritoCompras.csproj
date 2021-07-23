@@ -223,6 +223,11 @@
     <Content Include="Templates\Template_Principal\layout\styles\framework.css" />
     <Content Include="Templates\Template_Principal\layout\styles\index.html" />
     <Content Include="Templates\Template_Principal\layout\styles\layout.css" />
+    <Content Include="Templates\Template_Principal\pages\Contactenos.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudClientes.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudProductos.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudProveedores.aspx" />
+    <Content Include="Templates\Template_Principal\pages\CrudUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +274,41 @@
       <DependentUpon>LoginPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\Template_Principal\pages\Contactenos.aspx.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\Contactenos.aspx.designer.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudClientes.aspx.cs">
+      <DependentUpon>CrudClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudClientes.aspx.designer.cs">
+      <DependentUpon>CrudClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudProductos.aspx.cs">
+      <DependentUpon>CrudProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudProductos.aspx.designer.cs">
+      <DependentUpon>CrudProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudProveedores.aspx.cs">
+      <DependentUpon>CrudProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudProveedores.aspx.designer.cs">
+      <DependentUpon>CrudProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudUsuarios.aspx.cs">
+      <DependentUpon>CrudUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\CrudUsuarios.aspx.designer.cs">
+      <DependentUpon>CrudUsuarios.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="CrudPageUsuario.Master" />

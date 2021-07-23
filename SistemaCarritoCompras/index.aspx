@@ -41,8 +41,10 @@
                                 <li class="active"><a href="index.aspx">Home</a></li>
                                 <li><a class="drop">Mantenimientos</a>
                                     <ul>
-                                        <li><a href="Templates/Template_Principal/pages/CrudClientes.aspx">Clientes</a></li>
+                                        <li><a href="Templates/Template_Principal/pages/CrudUsuarios.aspx">Usuarios</a></li>
+                                        <li><a href="Templates/Template_Principal/pages/CrudProveedores.aspx">Proveedores</a></li>
                                         <li><a href="Templates/Template_Principal/pages/CrudProductos.aspx">Productos</a></li>
+                                        <li><a href="Templates/Template_Principal/pages/CrudClientes.aspx">Clientes</a></li>                                        
                                     </ul>
                                 </li>
                                 <li><a class="drop">Ventas</a>

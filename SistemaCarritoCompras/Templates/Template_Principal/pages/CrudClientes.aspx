@@ -31,7 +31,7 @@
                 <div class="wrapper row1">
                     <header id="header" class="hoc clear">
                         <div id="logo" class="fl_left">
-                            <h1><a href="index.html">LOS 7 MARES</a></h1>
+                            <h1><a href="../../../index.aspx">LOS 7 MARES</a></h1>
                         </div>
                         <nav id="mainav" class="fl_right">
                             <!-- ################################################################################################ -->
@@ -67,6 +67,7 @@
             </div>
             <div class="wrapper row3">
                 <main class="hoc container clear">
+                    <h5>LISTADO DE CLIENTES</h5>
                     <div class="content">
                         <div id="comments">
                             <div>

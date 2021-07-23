@@ -230,6 +230,7 @@
     <Content Include="Templates\Template_Principal\pages\CrudProveedores.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudRoles.aspx" />
     <Content Include="Templates\Template_Principal\pages\CrudUsuarios.aspx" />
+    <Content Include="Templates\Template_Principal\pages\Menu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +325,13 @@
     </Compile>
     <Compile Include="Templates\Template_Principal\pages\CrudUsuarios.aspx.designer.cs">
       <DependentUpon>CrudUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Principal\pages\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

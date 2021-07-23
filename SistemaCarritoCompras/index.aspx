@@ -44,7 +44,9 @@
                                         <li><a href="Templates/Template_Principal/pages/CrudUsuarios.aspx">Usuarios</a></li>
                                         <li><a href="Templates/Template_Principal/pages/CrudProveedores.aspx">Proveedores</a></li>
                                         <li><a href="Templates/Template_Principal/pages/CrudProductos.aspx">Productos</a></li>
-                                        <li><a href="Templates/Template_Principal/pages/CrudClientes.aspx">Clientes</a></li>                                        
+                                        <li><a href="Templates/Template_Principal/pages/CrudClientes.aspx">Clientes</a></li>
+                                        <li><a href="Templates/Template_Principal/pages/CrudRoles.aspx">Roles</a></li>
+                                        <li><a href="Templates/Template_Principal/pages/CrudCategorias.aspx">Categorias</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="drop">Ventas</a>

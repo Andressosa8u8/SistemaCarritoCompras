@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="SistemaCarritoCompras.Templates.Template_Principal.Views.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="cph_mensaje" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="cph_header" runat="server"></asp:ContentPlaceHolder>
+        </div>        
+        <div>
+            <asp:ContentPlaceHolder ID="contenido" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="bgded overlay row4" style="background-image: url('../images/galeria/footer.jpg');">
+            <footer id="footer" class="hoc clear">
+                <div class="center btmspace-50">
+                    <h6 class="heading">LOS 7 MARES</h6>
+                    <ul class="faico clear">
+                        <li><a class="faicon-facebook" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="faicon-google-plus" href="https://mail.google.com/mail/u/0/#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a class="faicon-twitter" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div id="ctdetails" class="clear">
+                    <ul class="nospace clear">
+                        <li class="one_quarter first">
+                            <div class="block clear"><a><i class="fas fa-phone" style="color: orange"></i></a><span><strong>LLamanos:</strong>+593 (02) 256 7890</span></div>
+                        </li>
+                        <li class="one_quarter">
+                            <div class="block clear"><a><i class="fas fa-envelope" style="color: orange"></i></a><span><strong>Envianos un Correo:</strong>los7mares@gmail.com</span></div>
+                        </li>
+                        <li class="one_quarter">
+                            <div class="block clear"><a><i class="fas fa-clock" style="color: orange"></i></a><span><strong>Lunes - Domingo:</strong> 08.00am - 18.00pm</span></div>
+                        </li>
+                        <li class="one_quarter">
+                            <div class="block clear"><a><i class="fas fa-map-marker-alt" style="color: orange"></i></a><span><strong>Visitanos:</strong> Calle J E155 Frente al Hospital MMH</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <!-- ################################################################################################ -->
+        <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
+        <script src="../layout/scripts/jquery.min.js"></script>
+        <script src="../layout/scripts/jquery.backtotop.js"></script>
+        <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    </form>
+</body>
+</html>

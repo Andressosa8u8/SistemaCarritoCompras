@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PrincipalAdmin.master.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.PrincipalAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inicio - Sistema Pasantes</title>
+    <link rel="stylesheet" href="../dist/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../dist/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="shortcut icon" href="../dist/images/LogoPrin.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form runat="server">
+        <div class="container-scroller d-flex">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item sidebar-category">
+                        <p>Menu</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PrincipalAdmin.aspx">
+                            <i class="mdi mdi-view-quilt menu-icon"></i>
+                            <span class="menu-title">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item sidebar-category">
+                        <p>Cruds</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+                            <span class="menu-title">Mantenimientos</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="Categoria.aspx">Categoria</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Proveedor.aspx">Proveedor</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Producto.aspx">Producto</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Pedido.aspx">Pedido</a></li>
+                                <li class="nav-item"><a class="nav-link" href="TipoUsuario.aspx">Tipo de Usuario</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Usuario.aspx">Usuario</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container-fluid page-body-wrapper">
+                <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row">
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                        <div class="navbar-brand-wrapper">
+                            <a class="navbar-brand brand-logo" href="Principal.aspx">
+                                <img src="../dist/images/Logo.png" style="width:50px" alt="logo" /></a>
+                            <a class="navbar-brand brand-logo-mini" href="Principal.aspx">
+                                <img src="..dist/images/Logo.png" style="width:50px" alt="logo" /></a>
+                        </div>
+                        <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1" style="text-transform:uppercase; color:black;">
+                            <asp:Label ID="Lbl_nombre" runat="server" Text=""></asp:Label>
+                        </h4>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item">
+                                <h4 class="mb-0 font-weight-bold d-none d-xl-block">
+                                    <asp:Label ID="lblFecha" style="text-transform:uppercase; color:black;" runat="server" Text=""></asp:Label>
+                                </h4>
+                            </li>
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
+                        <ul class="navbar-nav mr-lg-2">
+                            <li class="nav-item nav-search d-none d-lg-block">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search Here..." aria-label="search" aria-describedby="search">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                                    <img src="../dist/images/faces/perfil.png" alt="profile" />
+                                    <%--<span class="nav-profile-name">
+                                        <asp:Label ID="Lblnombre" runat="server" Text=""></asp:Label>
+                                    </span>--%>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                    <a class="dropdown-item">
+                                        <i class="mdi mdi-settings text-primary"></i>
+                                        Settings
+                                    </a>
+                                    <asp:LinkButton ID="lnbCerrarSession" OnClick="lnbCerrarSession_Click" CssClass="dropdown-item" runat="server">
+                                        <i class="mdi mdi-logout text-primary"></i>
+                                        Logout
+                                    </asp:LinkButton>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <asp:ContentPlaceHolder ID="cph_mensaje" runat="server"></asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="cph_contenido" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <footer class="footer">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©ECU911 2021</span>
+                                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Servicio <a href="https://www.ecu911.gob.ec/" target="_blank">Integrado de Seguridad</a> ECU 911</span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="../dist/vendors/js/vendor.bundle.base.js"></script>
+        <script src="../dist/vendors/chart.js/Chart.min.js"></script>
+        <script src="../dist/js/off-canvas.js"></script>
+        <script src="../dist/js/hoverable-collapse.js"></script>
+        <script src="../dist/js/template.js"></script>
+        <script src="../dist/js/dashboard.js"></script>
+    </form>
+</body>
+</html>

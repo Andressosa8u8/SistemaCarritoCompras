@@ -11,52 +11,43 @@ namespace SistemaCarritoCompras
 {
 
 
-    public partial class index1
+    public partial class index
     {
 
         /// <summary>
-        /// Control ScriptManager1.
+        /// Control cph_cabecera.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_cabecera;
 
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control login1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm login1;
 
         /// <summary>
-        /// Control txt_usu.
+        /// Control cph_mensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_mensaje;
 
         /// <summary>
-        /// Control txt_pass.
+        /// Control cph_contenido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pass;
-
-        /// <summary>
-        /// Control btn_ingresar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_ingresar;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_contenido;
     }
 }

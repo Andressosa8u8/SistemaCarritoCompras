@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaRestaurante" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ANDRES-SOSA;Initial Catalog=SistemaRestaurante;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="SistemaRestauranteConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Categoria" Member="Tbl_Categoria">
+    <Type Name="Tbl_Categoria">
+      <Column Name="cat_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cat_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cat_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_Categoria_Tbl_Producto" Member="Tbl_Producto" ThisKey="cat_id" OtherKey="cat_id" Type="Tbl_Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Pedido" Member="Tbl_Pedido">
+    <Type Name="Tbl_Pedido">
+      <Column Name="ped_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ped_cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ped_precio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ped_precioTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pro_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ped_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_Producto_Tbl_Pedido" Member="Tbl_Producto" ThisKey="pro_id" OtherKey="pro_id" Type="Tbl_Producto" IsForeignKey="true" />
+      <Association Name="Tbl_Usuario_Tbl_Pedido" Member="Tbl_Usuario" ThisKey="usu_id" OtherKey="usu_id" Type="Tbl_Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Producto" Member="Tbl_Producto">
+    <Type Name="Tbl_Producto">
+      <Column Name="pro_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pro_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pro_precio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pro_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="pro_imagen" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="cat_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prov_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pro_estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Tbl_Producto_Tbl_Pedido" Member="Tbl_Pedido" ThisKey="pro_id" OtherKey="pro_id" Type="Tbl_Pedido" />
+      <Association Name="Tbl_Categoria_Tbl_Producto" Member="Tbl_Categoria" ThisKey="cat_id" OtherKey="cat_id" Type="Tbl_Categoria" IsForeignKey="true" />
+      <Association Name="Tbl_Proveedor_Tbl_Producto" Member="Tbl_Proveedor" ThisKey="prov_id" OtherKey="prov_id" Type="Tbl_Proveedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Proveedor" Member="Tbl_Proveedor">
+    <Type Name="Tbl_Proveedor">
+      <Column Name="prov_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="prov_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prov_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="prov_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_Proveedor_Tbl_Producto" Member="Tbl_Producto" ThisKey="prov_id" OtherKey="prov_id" Type="Tbl_Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
+    <Type Name="Tbl_TipoUsuario">
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tusu_nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tusu_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
+    <Type Name="Tbl_Usuario">
+      <Column Name="usu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usu_nombres" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usu_apellidos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usu_cedula" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usu_nomlogin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usu_password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usu_direccion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="usu_correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="usu_telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usu_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_Usuario_Tbl_Pedido" Member="Tbl_Pedido" ThisKey="usu_id" OtherKey="usu_id" Type="Tbl_Pedido" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SistemaCarritoCompras
+namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 {
 
 
-    public partial class index1
+    public partial class TipoUsuario
     {
 
         /// <summary>
@@ -33,30 +33,21 @@ namespace SistemaCarritoCompras
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control txt_usu.
+        /// Control btn_agregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_usu;
+        protected global::System.Web.UI.WebControls.Button btn_agregar;
 
         /// <summary>
-        /// Control txt_pass.
+        /// Control grvTipoUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pass;
-
-        /// <summary>
-        /// Control btn_ingresar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_ingresar;
+        protected global::System.Web.UI.WebControls.GridView grvTipoUsuario;
     }
 }

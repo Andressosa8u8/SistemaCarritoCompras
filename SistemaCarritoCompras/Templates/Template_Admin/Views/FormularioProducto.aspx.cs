@@ -92,7 +92,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 //    FU_imagen.SaveAs(Server.MapPath("~/Templates/Images") + FU_imagen.FileName);
 
                 //}
-                proinfo.pro_imagen = FU_imagen.FileName;
+                proinfo.pro_imagen = FU_imagen.FileBytes;
                 proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
                 proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 

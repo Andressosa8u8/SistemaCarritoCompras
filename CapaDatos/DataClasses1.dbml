@@ -27,7 +27,7 @@
       <Column Name="pro_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="pro_precio" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="pro_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="pro_imagen" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="pro_imagen" Type="System.Data.Linq.Binary" DbType="VarBinary(150)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="cat_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="prov_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pro_estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />

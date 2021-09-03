@@ -26,8 +26,8 @@
                         <asp:TextBox ID="txt_descripcion" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label>Imagen</label>
-                        <asp:FileUpload ID="FU_imagen" runat="server" />
+
+                        <asp:FileUpload ID="FU_imagen" CssClass="form-control" runat="server" />
                     </div>
                     <div class="form-group">
                         <label>Categoria</label>

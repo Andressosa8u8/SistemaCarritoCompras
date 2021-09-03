@@ -22,7 +22,7 @@ namespace CapaNegocio
         //metodo para retornar tipo de usuarios
         public static List<Tbl_TipoUsuario> obtenerTipoUsuarios()
         {
-            var lista = dc.Tbl_TipoUsuario.Where(tusu => tusu.tusu_estado == "A" || tusu.tusu_estado == "C");
+            var lista = dc.Tbl_TipoUsuario.Where(tusu => tusu.tusu_estado == "A");
             return lista.ToList();
         }
 

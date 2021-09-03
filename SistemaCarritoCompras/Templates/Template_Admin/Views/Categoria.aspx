@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Admin/Views/PrincipalAdmin.Master" AutoEventWireup="true" CodeBehind="Categoria.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.Categoria" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_mensaje" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>    
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -41,21 +42,21 @@
                                         <asp:Label ID="estado" runat="server" Text='<%#Eval("cat_estado")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                
+
                                 <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
-                                        </ItemTemplate>
-                                        <HeaderStyle Width="17px" />
-                                        <ItemStyle Width="17px" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
-                                        <ItemTemplate>
-                                            <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
-                                        </ItemTemplate>
-                                        <HeaderStyle Width="17px" />
-                                        <ItemStyle Width="17px" />
-                                    </asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>

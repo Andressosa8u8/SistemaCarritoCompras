@@ -51,7 +51,7 @@ namespace CapaDatos
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::CapaDatos.Properties.Settings.Default.SistemaRestauranteConnectionString, mappingSource)
+				base(global::CapaDatos.Properties.Settings.Default.SistemaRestauranteConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

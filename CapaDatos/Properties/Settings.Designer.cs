@@ -33,5 +33,15 @@ namespace CapaDatos.Properties {
                 return ((string)(this["SistemaRestauranteConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ZOCAPO;Initial Catalog=SistemaRestaurante;Integrated Security=True")]
+        public string SistemaRestauranteConnectionString1 {
+            get {
+                return ((string)(this["SistemaRestauranteConnectionString1"]));
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <span class="login100-form-title p-b-41" style="text-align: center; font-family: 'Brush Script MT'; font-size: xx-large">LOS 7 MARES
+            <span class="login100-form-title p-b-41" style="text-align: center; font-family: 'Brush Script MT'; font-size: xx-large">FOOD NOW
             </span>
             <div class="login100-form validate-form p-b-33 p-t-5">
                 <!--<center>-->                

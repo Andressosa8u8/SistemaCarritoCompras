@@ -22,7 +22,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         private void cargarPedido()
         {
             List<Tbl_Pedido> listaPed = new List<Tbl_Pedido>();
-            listaPed = Cn_Pedido.obtenerPedidos();
+            listaPed = Cn_Pedido.obtenerPedido();
             if (listaPed != null)
             {
                 grvPedidos.DataSource = listaPed;
@@ -40,7 +40,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             int codigo = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Editar")
             {
-                Response.Redirect("~/Templates//Template_Admin/Views/FormularioPedido.aspx?cod=" + codigo, true);
+                Response.Redirect("~/Templates/Template_Admin/Views/FormularioPedido.aspx?cod=" + codigo, true);
             }
             else if (e.CommandName == "Eliminar")
             {

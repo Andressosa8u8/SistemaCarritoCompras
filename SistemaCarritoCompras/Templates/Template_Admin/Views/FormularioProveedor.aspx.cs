@@ -9,9 +9,10 @@ using CapaNegocio;
 
 namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 {
-    public partial class FormularioCategoria : System.Web.UI.Page
+    public partial class FormularioProveedor : System.Web.UI.Page
     {
-        private Tbl_Categoria catinfo = new Tbl_Categoria();
+
+        private Tbl_Proveedor provinfo = new Tbl_Proveedor();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,16 +21,18 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 if (Request["cod"] != null)
                 {
                     int codigo = Convert.ToInt32(Request["cod"]);
-                    catinfo = Cn_Categoria.obtenerCategoriaxId(codigo);
+                    provinfo = Cn_Proveedor.obtenerProveedorxId(codigo);
                     btn_Modificar.Visible = true;
 
-                    if (catinfo != null)
+                    if (provinfo != null)
                     {
-                        txt_nomCategoria.Text = catinfo.cat_nombre.ToString();
+                        txt_nomProveedor.Text = provinfo.prov_nombre.ToString();
+                        txt_descripcion.Text = provinfo.prov_descripcion.ToString();
+
                         btn_Guardar.Visible = false;
                     }
                 }
-            }            
+            }
         }
 
         private void guardar_modificar_datos(int id)
@@ -40,25 +43,26 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             }
             else
             {
-                catinfo = Cn_Categoria.obtenerCategoriaxId(id);
-                if (catinfo != null)
+                provinfo = Cn_Proveedor.obtenerProveedorxId(id);
+                if (provinfo != null)
                 {
-                    modifcar(catinfo);
+                    modifcar(provinfo);
                 }
             }
-        }        
+        }
 
         private void Guardar()
         {
             try
             {
-                catinfo = new Tbl_Categoria();
-                catinfo.cat_nombre = txt_nomCategoria.Text;
+                provinfo = new Tbl_Proveedor();
+                provinfo.prov_nombre = txt_nomProveedor.Text;
+                provinfo.prov_descripcion = txt_descripcion.Text;
 
-                Cn_Categoria.save(catinfo);
+                Cn_Proveedor.save(provinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
-                Response.Redirect("~/Templates/Template_Admin/Views/Categoria.aspx");
+                Response.Redirect("~/Templates/Template_Admin/Views/Proveedor.aspx");
             }
             catch (Exception ex)
             {
@@ -67,16 +71,17 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             }
         }
 
-        private void modifcar(Tbl_Categoria catinfo)
+        private void modifcar(object catinfo)
         {
             try
             {
-                catinfo.cat_nombre = txt_nomCategoria.Text;
+                provinfo.prov_nombre = txt_nomProveedor.Text;
+                provinfo.prov_descripcion = txt_descripcion.Text;
 
-                Cn_Categoria.modify(catinfo);
+                Cn_Proveedor.modify(provinfo);
                 string js1 = "alert('Datos Modificados Con Exito..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
-                Response.Redirect("~/Templates/Template_Admin/Views/Categoria.aspx");
+                Response.Redirect("~/Templates/Template_Admin/Views/Proveedor.aspx");
             }
             catch (Exception ex)
             {
@@ -87,11 +92,11 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
-            bool existe = Cn_Categoria.autentificarxNom(txt_nomCategoria.Text);
+            bool existe = Cn_Proveedor.autentificarxNom(txt_nomProveedor.Text);
             if (existe)
             {
-                Tbl_Categoria cat = new Tbl_Categoria();
-                cat = Cn_Categoria.obtenerCategoriaxNombre(txt_nomCategoria.Text);
+                Tbl_Proveedor cat = new Tbl_Proveedor();
+                cat = Cn_Proveedor.obtenerProveedorxNombre(txt_nomProveedor.Text);
                 if (cat != null)
                 {
                     string js1 = "alert('Categoria existente..')";
@@ -111,7 +116,8 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 
         protected void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Templates/Template_Admin/Views/Categoria.aspx");
-        }
+            Response.Redirect("~/Templates/Template_Admin/Views/Proveedor.aspx");
+        }       
+        
     }
 }

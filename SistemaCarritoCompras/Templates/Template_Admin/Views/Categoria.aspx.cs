@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SistemaCarritoCompras.Templates.Template_Admin.Views
-{
+{   
     public partial class Categoria : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -21,11 +21,11 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 
         private void cargarCategoria()
         {
-            List<Tbl_Categoria> listaCategorias = new List<Tbl_Categoria>();
-            listaCategorias = Cn_Categoria.obtenerCategorias();
-            if (listaCategorias != null)
+            List<Tbl_Categoria> listaCat = new List<Tbl_Categoria>();
+            listaCat = Cn_Categoria.obtenerCategorias();
+            if (listaCat != null)
             {
-                grvCategorias.DataSource = listaCategorias;
+                grvCategorias.DataSource = listaCat;
                 grvCategorias.DataBind();
             }
         }
@@ -40,7 +40,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             int codigo = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Editar")
             {
-                Response.Redirect("~/Templates//Template_Admin/Views/FormularioCategoria.aspx?cod=" + codigo, true);
+                Response.Redirect("~/Templates/Template_Admin/Views/FormularioCategoria.aspx?cod=" + codigo, true);
             }
             else if (e.CommandName == "Eliminar")
             {

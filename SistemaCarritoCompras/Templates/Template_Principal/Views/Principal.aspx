@@ -35,7 +35,7 @@
                 <div class="wrapper row1">
                     <header id="header" class="hoc clear">
                         <div id="logo" class="fl_left">
-                            <h1><a href="Principal.aspx">LOS 7 MARES</a></h1>
+                            <h1><a href="Principal.aspx">FOOD NOW</a></h1>
                         </div>
                         <nav id="mainav" class="fl_right">
                             <!-- ################################################################################################ -->
@@ -56,7 +56,7 @@
                 <div id="pageintro" class="hoc clear">
                     <article>
                         <strong>
-                            <h3 class="heading" style="font-family: Brush Script MT;">"DEL MAR A TU PALADAR"</h3>
+                            <h3 class="heading" style="font-family: Brush Script MT;">"BARRIGA LLENA CORAZÓN CONTENTO"</h3>
                         </strong>
                         <footer>
                             <ul class="nospace inline pushright">

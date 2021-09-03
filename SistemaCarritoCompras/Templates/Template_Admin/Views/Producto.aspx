@@ -74,19 +74,19 @@
                                 </asp:TemplateField>
 
                                 <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
-                                        <ItemTemplate>
-                                            <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("pro_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
-                                        </ItemTemplate>
-                                        <HeaderStyle Width="17px" />
-                                        <ItemStyle Width="17px" />
-                                    </asp:TemplateField>
-                                    <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
-                                        <ItemTemplate>
-                                            <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("pro_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
-                                        </ItemTemplate>
-                                        <HeaderStyle Width="17px" />
-                                        <ItemStyle Width="17px" />
-                                    </asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("pro_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("pro_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>

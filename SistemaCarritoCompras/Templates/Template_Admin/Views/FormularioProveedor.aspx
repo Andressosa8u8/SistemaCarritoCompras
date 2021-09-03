@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Admin/Views/PrincipalAdmin.Master" AutoEventWireup="true" CodeBehind="FormularioCategoria.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.FormularioCategoria" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Admin/Views/PrincipalAdmin.Master" AutoEventWireup="true" CodeBehind="FormularioProveedor.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.FormularioProveedor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_mensaje" runat="server">
@@ -9,13 +9,17 @@
         <ContentTemplate>
             <div class="card">
                 <div class="card-header">
-                    <h4>Formulario Categoria</h4>
+                    <h4>Formulario Proveedor</h4>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Nombre de la Categoria</label>
-                        <asp:TextBox ID="txt_nomCategoria" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label>Nombre del Proveedor</label>
+                        <asp:TextBox ID="txt_nomProveedor" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <asp:TextBox ID="txt_descripcion" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>                    
                 </div>
                 <div class="card-footer text-right">
                     <asp:Button ID="btn_Cancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btn_Cancelar_Click" runat="server" Text="Cancelar" />

@@ -12,16 +12,16 @@ namespace CapaNegocio
         //Instanciamos el dbml
         private static DataClasses1DataContext dc = new DataClasses1DataContext();
 
-        //metodo para retornar todos las categorias
+        //metodo para retornar todos los responsables
         public static List<Tbl_Categoria> obtenerCategorias()
         {
-            var lista = dc.Tbl_Categoria.Where(cat => cat.cat_estado == "A");
+            var lista = dc.Tbl_Categoria.Where(cat => cat.cat_estado == "A" || cat.cat_estado == "C");
             return lista.ToList();
         }
 
         public static Tbl_Categoria obtenerCategoriaxId(int id)
         {
-            var catid = dc.Tbl_Categoria.FirstOrDefault(cat => cat.cat_id.Equals(id) && cat.cat_estado == "A");
+            var catid = dc.Tbl_Categoria.FirstOrDefault(cat => cat.cat_id.Equals(id) && cat.cat_estado == "A" || cat.cat_estado == "C");
             return catid;
         }
 
@@ -55,6 +55,7 @@ namespace CapaNegocio
         {
             try
             {
+                cat.cat_estado = "C";
                 dc.SubmitChanges();
             }
             catch (Exception ex)

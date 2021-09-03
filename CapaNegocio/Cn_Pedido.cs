@@ -12,16 +12,44 @@ namespace CapaNegocio
         //Instanciamos el dbml
         private static DataClasses1DataContext dc = new DataClasses1DataContext();
 
-        //metodo para retornar todos los pedidos
-        public static List<Tbl_Pedido> obtenerPedidos()
+        //metodo traer para pedidos
+        public static List<Tbl_Pedido> obtenerPedido()
         {
-            var lista = dc.Tbl_Pedido.Where(ped => ped.ped_estado == "A");
+            var lista = dc.Tbl_Pedido.Where(ped => ped.ped_estado == "A" || ped.ped_estado == "C");
             return lista.ToList();
         }
 
+        //metodo traer para tipo de producto
+        public static List<Tbl_Producto> obtenerTipoProducto()
+        {
+            var lista = dc.Tbl_Producto.Where(pro => pro.pro_estado == "A");
+            return lista.ToList();
+        }
+
+        //metodo traer para cedula usuario
+        public static List<Tbl_Usuario> obtenerCedulaUsu()
+        {
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == "A");
+            return lista.ToList();
+        }
+
+        ////metodo para verificar si existe el producto
+        //public static bool autentificarxProducto(string nombre)
+        //{
+        //    var auto = dc.Tbl_Producto.Any(pro => pro.pro_estado == "A" && pro.pro_nombre == (nombre));
+        //    return auto;
+        //}
+
+        ////metodo para verificar si existe la cedula usuario
+        //public static bool autentificarxCedula(int cedula)
+        //{
+        //    var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == "A" && usu.usu_cedula == (cedula));
+        //    return auto;
+        //}
+
         public static Tbl_Pedido obtenerPedidoxId(int id)
         {
-            var pedid = dc.Tbl_Pedido.FirstOrDefault(ped => ped.ped_id.Equals(id) && ped.ped_estado == "A");
+            var pedid = dc.Tbl_Pedido.FirstOrDefault(ped => ped.ped_id.Equals(id) && ped.ped_estado == "A" || ped.ped_estado == "C");
             return pedid;
         }
 
@@ -43,6 +71,7 @@ namespace CapaNegocio
         {
             try
             {
+                ped.ped_estado = "C";
                 dc.SubmitChanges();
             }
             catch (Exception ex)

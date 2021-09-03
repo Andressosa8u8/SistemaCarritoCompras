@@ -97,11 +97,14 @@
     <Content Include="Templates\Template_Admin\dist\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Templates\Template_Admin\Views\Categoria.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioCategoria.aspx" />
+    <Content Include="Templates\Template_Admin\Views\FormularioPedido.aspx" />
+    <Content Include="Templates\Template_Admin\Views\FormularioProducto.aspx" />
+    <Content Include="Templates\Template_Admin\Views\FormularioProveedor.aspx" />
+    <Content Include="Templates\Template_Admin\Views\FormularioUsuario.aspx" />
     <Content Include="Templates\Template_Admin\Views\Pedido.aspx" />
     <Content Include="Templates\Template_Admin\Views\PrincipalAdmin.aspx" />
     <Content Include="Templates\Template_Admin\Views\Producto.aspx" />
     <Content Include="Templates\Template_Admin\Views\Proveedor.aspx" />
-    <Content Include="Templates\Template_Admin\Views\TipoUsuario.aspx" />
     <Content Include="Templates\Template_Admin\Views\Usuario.aspx" />
     <Content Include="Templates\Template_Crud\css\main.css" />
     <Content Include="Templates\Template_Crud\css\util.css" />
@@ -305,6 +308,34 @@
     <Compile Include="Templates\Template_Admin\Views\FormularioCategoria.aspx.designer.cs">
       <DependentUpon>FormularioCategoria.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioPedido.aspx.cs">
+      <DependentUpon>FormularioPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioPedido.aspx.designer.cs">
+      <DependentUpon>FormularioPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioProducto.aspx.cs">
+      <DependentUpon>FormularioProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioProducto.aspx.designer.cs">
+      <DependentUpon>FormularioProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioProveedor.aspx.cs">
+      <DependentUpon>FormularioProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioProveedor.aspx.designer.cs">
+      <DependentUpon>FormularioProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioUsuario.aspx.cs">
+      <DependentUpon>FormularioUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormularioUsuario.aspx.designer.cs">
+      <DependentUpon>FormularioUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Templates\Template_Admin\Views\Pedido.aspx.cs">
       <DependentUpon>Pedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,13 +370,6 @@
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\Proveedor.aspx.designer.cs">
       <DependentUpon>Proveedor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\Template_Admin\Views\TipoUsuario.aspx.cs">
-      <DependentUpon>TipoUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Templates\Template_Admin\Views\TipoUsuario.aspx.designer.cs">
-      <DependentUpon>TipoUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>

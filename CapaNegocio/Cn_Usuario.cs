@@ -15,16 +15,39 @@ namespace CapaNegocio
         //metodo para retornar todos los responsables
         public static List<Tbl_Usuario> obtenerUsuarios()
         {
-            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == "A");
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == "A" || usu.usu_estado == "C");
             return lista.ToList();
         }
+
+        //metodo para retornar tipo de usuarios
+        public static List<Tbl_TipoUsuario> obtenerTipoUsuarios()
+        {
+            var lista = dc.Tbl_TipoUsuario.Where(tusu => tusu.tusu_estado == "A" || tusu.tusu_estado == "C");
+            return lista.ToList();
+        }
+
         //metodo para verificar credenciales
         public static bool autentificar(string nombre, string pass)
         {
             var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == "A" && usu.usu_nomlogin.Equals(nombre) && usu.usu_password.Equals(pass));
             return auto;
         }
-        //metodo para verificar si existe el nombre
+
+        //metodo para verificar si existe la cedula
+        public static bool autentificarxCedula(int cedula)
+        {
+            var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == "A" && usu.usu_cedula == (cedula));
+            return auto;
+        }
+
+        //metodo para obtener la cedula
+        public static Tbl_Usuario obtenerUsuarioxCedula(int cedula)
+        {
+            var usuced = dc.Tbl_Usuario.FirstOrDefault(usu => usu.usu_cedula.Equals(cedula) && usu.usu_estado == "A");
+            return usuced;
+        }
+
+        //metodo para verificar si existe el nombre de login
         public static bool autentificarxNomlogin(string nomlogin)
         {
             var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == "A" && usu.usu_nomlogin == (nomlogin));

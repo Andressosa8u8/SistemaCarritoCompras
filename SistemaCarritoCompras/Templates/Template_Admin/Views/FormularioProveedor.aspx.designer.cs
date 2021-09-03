@@ -11,7 +11,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 {
 
 
-    public partial class TipoUsuario
+    public partial class FormularioProveedor
     {
 
         /// <summary>
@@ -33,21 +33,48 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control btn_agregar.
+        /// Control txt_nomProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_agregar;
+        protected global::System.Web.UI.WebControls.TextBox txt_nomProveedor;
 
         /// <summary>
-        /// Control grvTipoUsuario.
+        /// Control txt_descripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvTipoUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txt_descripcion;
+
+        /// <summary>
+        /// Control btn_Cancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Cancelar;
+
+        /// <summary>
+        /// Control btn_Modificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Modificar;
+
+        /// <summary>
+        /// Control btn_Guardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Guardar;
     }
 }

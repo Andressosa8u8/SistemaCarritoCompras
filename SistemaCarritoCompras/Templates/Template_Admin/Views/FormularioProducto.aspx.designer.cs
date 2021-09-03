@@ -11,7 +11,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 {
 
 
-    public partial class FormularioCategoria
+    public partial class FormularioProducto
     {
 
         /// <summary>
@@ -33,13 +33,58 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control txt_nomCategoria.
+        /// Control txt_nomProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nomCategoria;
+        protected global::System.Web.UI.WebControls.TextBox txt_nomProducto;
+
+        /// <summary>
+        /// Control txt_preProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_preProducto;
+
+        /// <summary>
+        /// Control txt_descripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_descripcion;
+
+        /// <summary>
+        /// Control FU_imagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FU_imagen;
+
+        /// <summary>
+        /// Control ddl_categoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_categoria;
+
+        /// <summary>
+        /// Control ddl_proveedor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_proveedor;
 
         /// <summary>
         /// Control btn_Cancelar.

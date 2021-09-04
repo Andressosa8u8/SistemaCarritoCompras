@@ -26,6 +26,7 @@
                         <asp:TextBox ID="txt_descripcion" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
+                        <asp:Image ID="Image1" runat="server" />
                         <asp:FileUpload ID="FU_imagen" CssClass="form-control" runat="server" />
                     </div>
                     <div class="form-group">

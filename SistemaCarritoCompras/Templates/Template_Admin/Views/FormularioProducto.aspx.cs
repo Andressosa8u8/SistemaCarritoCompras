@@ -25,11 +25,11 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                     btn_Modificar.Visible = true;
 
                     if (proinfo != null)
-                    {
+                    { 
                         txt_nomProducto.Text = proinfo.pro_nombre.ToString();
                         txt_preProducto.Text = proinfo.pro_precio.ToString();
                         txt_descripcion.Text = proinfo.pro_descripcion.ToString();
-                        
+                        Image1.ImageUrl = "~/Templates/Images/" + FU_imagen.FileName;
                         ddl_categoria.Text = proinfo.cat_id.ToString();
                         ddl_proveedor.Text = proinfo.prov_id.ToString();
 
@@ -128,6 +128,11 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 proinfo.pro_nombre = txt_nomProducto.Text;
                 proinfo.pro_precio = Convert.ToInt32(txt_preProducto.Text);
                 proinfo.pro_descripcion = txt_descripcion.Text;
+                if (!string.IsNullOrEmpty(FU_imagen.FileName))
+                {
+                    FU_imagen.SaveAs(Server.MapPath("/Templates/Images/") + FU_imagen.FileName);
+                }
+                proinfo.pro_imagen = FU_imagen.FileName;
                 proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
                 proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 

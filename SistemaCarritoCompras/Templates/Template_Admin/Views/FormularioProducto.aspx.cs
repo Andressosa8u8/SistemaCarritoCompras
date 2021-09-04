@@ -29,7 +29,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                         txt_nomProducto.Text = proinfo.pro_nombre.ToString();
                         txt_preProducto.Text = proinfo.pro_precio.ToString();
                         txt_descripcion.Text = proinfo.pro_descripcion.ToString();
-                        //FU_imagen.FileName = proinfo.pro_imagen.ToString();
+                        Image1.ImageUrl = "~/Templates/Images/" + FU_imagen.FileName;
                         ddl_categoria.Text = proinfo.cat_id.ToString();
                         ddl_proveedor.Text = proinfo.prov_id.ToString();
 

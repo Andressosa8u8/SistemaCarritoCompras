@@ -42,6 +42,15 @@ namespace SistemaCarritoCompras
         protected global::System.Web.UI.WebControls.TextBox txt_nom;
 
         /// <summary>
+        /// Control txt_ape.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_ape;
+
+        /// <summary>
         /// Control txt_ced.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace SistemaCarritoCompras
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_email;
+
+        /// <summary>
+        /// Control txt_tel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_tel;
 
         /// <summary>
         /// Control btn_registrar.

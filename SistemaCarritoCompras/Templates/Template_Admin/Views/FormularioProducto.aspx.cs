@@ -25,7 +25,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                     btn_Modificar.Visible = true;
 
                     if (proinfo != null)
-                    { 
+                    {
                         txt_nomProducto.Text = proinfo.pro_nombre.ToString();
                         txt_preProducto.Text = proinfo.pro_precio.ToString();
                         txt_descripcion.Text = proinfo.pro_descripcion.ToString();
@@ -95,6 +95,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             //{
             //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Seleccionar un Archivo....!!')", true);
             //}
+
             try
             {
                 proinfo = new Tbl_Producto();
@@ -125,8 +126,9 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         {
             try
             {
+                proinfo = new Tbl_Producto();
                 proinfo.pro_nombre = txt_nomProducto.Text;
-                proinfo.pro_precio = Convert.ToInt32(txt_preProducto.Text);
+                proinfo.pro_precio = Convert.ToDouble(txt_preProducto.Text);
                 proinfo.pro_descripcion = txt_descripcion.Text;
                 if (!string.IsNullOrEmpty(FU_imagen.FileName))
                 {
@@ -136,8 +138,8 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
                 proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 
-                Cn_Producto.modify(proinfo);
-                string js1 = "alert('Datos Modificados Con Exito..')";
+                Cn_Producto.save(proinfo);
+                string js1 = "alert('Datos Guardados Con Exito..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
                 Response.Redirect("~/Templates/Template_Admin/Views/Producto.aspx");
             }
@@ -165,9 +167,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             {
                 guardar_modificar_datos(Convert.ToInt32(Request["cod"]));
             }
-        }
-
-        
+        }        
 
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {

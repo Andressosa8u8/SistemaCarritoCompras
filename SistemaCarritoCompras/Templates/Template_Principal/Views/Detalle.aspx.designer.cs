@@ -11,7 +11,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 {
 
 
-    public partial class Contactenos1
+    public partial class Detalle
     {
 
         /// <summary>

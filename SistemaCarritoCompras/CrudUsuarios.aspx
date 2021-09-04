@@ -11,8 +11,13 @@
             <span class="contact100-form-title">Formulario de usuarios
             </span>
             <div class="wrap-input100 validate-input bg1">
-                <span class="label-input100">NOMBRE: </span>
+                <span class="label-input100">NOMBRES: </span>
                 <asp:TextBox ID="txt_nom" placeholder="Ingrese el nombre..." runat="server" CssClass="input100"></asp:TextBox>
+            </div>
+
+            <div class="wrap-input100 validate-input bg1">
+                <span class="label-input100">APELLIDOS: </span>
+                <asp:TextBox ID="txt_ape" placeholder="Ingrese el nombre..." runat="server" CssClass="input100"></asp:TextBox>
             </div>
 
             <div class="wrap-input100 validate-input bg1">
@@ -27,24 +32,29 @@
 
             <div class="wrap-input100 validate-input bg1">
                 <span class="label-input100">CONTRASEÑA: </span>
-                <asp:TextBox CssClass="input100" ID="txt_pass" placeholder="Ingrese la contraseña..." runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="input100" ID="txt_pass" placeholder="Ingrese la contraseña..." TextMode="Password" runat="server"></asp:TextBox>
             </div>
 
             <div class="wrap-input100 validate-input bg1">
-                <span class="label-input100">DIRECION: </span>
+                <span class="label-input100">DIRECCION: </span>
                 <asp:TextBox CssClass="input100" ID="txt_dir" placeholder="Ingrese la dirección..." runat="server"></asp:TextBox>
             </div>
 
             <div class="wrap-input100 validate-input bg1">
                 <span class="label-input100">EMAIL: </span>
-                <asp:TextBox CssClass="input100" ID="txt_email" placeholder="Ingrese el email..." runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="input100" ID="txt_email" placeholder="Ingrese el email..." TextMode="Email" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="wrap-input100 validate-input bg1">
+                <span class="label-input100">TELEFONO: </span>
+                <asp:TextBox CssClass="input100" ID="txt_tel" TextMode="Phone" runat="server"></asp:TextBox>
             </div>
 
             <div class="container-contact100-form-btn">
-                <asp:Button class="contact100-form-btn" ID="btn_registrar" runat="server" Text="Ingresar" />
+                <asp:Button class="contact100-form-btn" ID="btn_registrar" runat="server" OnClick="btn_registrar_Click" Text="Registrar" />
             </div>
             <div class="container-contact100-form-btn">
-                <asp:Button class="contact100-form-btn" ID="btn_cancelar" runat="server" Text="Cancelar" OnClick="btn_cancelar_Click"/>
+                <asp:Button class="contact100-form-btn" ID="btn_cancelar" runat="server" OnClick="btn_cancelar_Click" Text="Cancelar" />
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

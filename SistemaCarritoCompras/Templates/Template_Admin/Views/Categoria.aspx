@@ -52,7 +52,7 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("cat_id")%>' CommandName="Eliminar" OnClientClick="return confirm('Esta seguro que desea eliminar este registro..')" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
                                     </ItemTemplate>
                                     <HeaderStyle Width="17px" />
                                     <ItemStyle Width="17px" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Principal/Views/Principal.Master" AutoEventWireup="true" CodeBehind="Contactenos.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Principal.Views.Contactenos1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Principal/Views/Principal.Master" AutoEventWireup="true" CodeBehind="Detalle.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Principal.Views.Detalle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -15,7 +15,7 @@
                             <!-- ################################################################################################ -->
                             <ul class="nospace">
                                 <li><i class="fas fa-phone rgtspace-5"></i>+593 (02) 256 7890</li>
-                                <li><i class="far fa-envelope rgtspace-5"></i>los7mares@gmail.com</li>
+                                <li><i class="far fa-envelope rgtspace-5"></i>foodnow@gmail.com</li>
                             </ul>
                             <!-- ################################################################################################ -->
                         </div>
@@ -35,7 +35,7 @@
                 <div class="wrapper row1">
                     <header id="header" class="hoc clear">
                         <div id="logo" class="fl_left">
-                            <h1><a href="Principal.aspx">LOS 7 MARES</a></h1>
+                            <h1><a href="Principal.aspx">FOOD NOW</a></h1>
                         </div>
                         <nav id="mainav" class="fl_right">
                             <!-- ################################################################################################ -->
@@ -46,7 +46,7 @@
                                         <li><a href="Menu.aspx">Pedido</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="Contactenos.aspx">Contactenos</a></li>
+                                <li><a href="Detalle.aspx">Detalle de Compra</a></li>
                             </ul>
                             <!-- ################################################################################################ -->
                         </nav>
@@ -54,9 +54,9 @@
                 </div>
                 <!-- ################################################################################################ -->
                 <div id="breadcrumb" class="hoc clear">
-                    <h6 class="heading">Comentarios</h6>
+                    <h6 class="heading">Reportes</h6>
                     <ul>
-                        <li><a href="Contactenos.aspx">Contactenos</a></li>
+                        <li><a href="Detalle.aspx">Detalle de Compra</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,36 +67,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="contenido" runat="server">
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
-            <div class="wrapper row3">
-                <main class="hoc container clear">
-                    <div class="content">
-                        <div id="comments">
-                            <h2>Escriba su experiencia</h2>
-                            <form action="#" method="post">
-                                <div class="one_third first">
-                                    <label for="name">Nombre <span>*</span></label>
-                                    <input type="text" name="name" id="name" value="" size="22" required>
-                                </div>
-                                <div class="one_third">
-                                    a
-                                    <label for="email">Email <span>*</span></label>
-                                    <input type="email" name="email" id="email" value="" size="22" required>
-                                </div>
-                                <div class="block clear">
-                                    <label for="comment">Su Comentario</label>
-                                    <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-                                </div>
-                                <div>
-                                    <input type="submit" name="submit" value="Enviar">
 
-                                    <input type="reset" name="reset" value="Cancelar">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </main>
-            </div>
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

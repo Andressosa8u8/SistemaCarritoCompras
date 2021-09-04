@@ -51,6 +51,15 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         protected global::System.Web.UI.WebControls.TextBox txt_descripcion;
 
         /// <summary>
+        /// Control Image1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
         /// Control FU_imagen.
         /// </summary>
         /// <remarks>

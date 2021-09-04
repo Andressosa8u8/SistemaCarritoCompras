@@ -27,7 +27,7 @@
       <Column Name="pro_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="pro_precio" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="pro_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="pro_imagen" Type="System.Data.Linq.Binary" DbType="VarBinary(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="pro_imagen" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="cat_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="prov_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="pro_estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -45,14 +45,6 @@
       <Association Name="Tbl_Proveedor_Tbl_Producto" Member="Tbl_Producto" ThisKey="prov_id" OtherKey="prov_id" Type="Tbl_Producto" />
     </Type>
   </Table>
-  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
-    <Type Name="Tbl_TipoUsuario">
-      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tusu_nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="tusu_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Usuario" />
-    </Type>
-  </Table>
   <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
     <Type Name="Tbl_Usuario">
       <Column Name="usu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -68,6 +60,14 @@
       <Column Name="usu_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
       <Association Name="Tbl_Usuario_Tbl_Pedido" Member="Tbl_Pedido" ThisKey="usu_id" OtherKey="usu_id" Type="Tbl_Pedido" />
       <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
+    <Type Name="Tbl_TipoUsuario">
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tusu_nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tusu_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Usuario" />
     </Type>
   </Table>
 </Database>

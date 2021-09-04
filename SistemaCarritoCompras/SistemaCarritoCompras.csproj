@@ -97,6 +97,7 @@
     <Content Include="Templates\Template_Admin\dist\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Templates\Template_Admin\dist\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Templates\Template_Admin\Views\Categoria.aspx" />
+    <Content Include="Templates\Template_Admin\Views\FormProduct.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioCategoria.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioPedido.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioProducto.aspx" />
@@ -301,6 +302,13 @@
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\Categoria.aspx.designer.cs">
       <DependentUpon>Categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormProduct.aspx.cs">
+      <DependentUpon>FormProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template_Admin\Views\FormProduct.aspx.designer.cs">
+      <DependentUpon>FormProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\FormularioCategoria.aspx.cs">
       <DependentUpon>FormularioCategoria.aspx</DependentUpon>

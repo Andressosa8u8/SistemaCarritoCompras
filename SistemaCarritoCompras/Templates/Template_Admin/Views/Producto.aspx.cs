@@ -1,11 +1,11 @@
-﻿using CapaDatos;
-using CapaNegocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CapaDatos;
+using CapaNegocio;
 
 namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 {
@@ -30,17 +30,12 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             }
         }
 
-        protected void btn_agregar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Templates/Template_Admin/Views/FormularioProducto.aspx");
-        }
-
         protected void grvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int codigo = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Editar")
             {
-                Response.Redirect("~/Templates/Template_Admin/Views/FormularioProducto.aspx?cod=" + codigo, true);
+                Response.Redirect("~/Templates//Template_Admin/Views/FormularioProveedor.aspx?cod=" + codigo, true);
             }
             else if (e.CommandName == "Eliminar")
             {
@@ -52,6 +47,11 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                     cargarProducto();
                 }
             }
+        }
+
+        protected void btn_agregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Templates/Template_Admin/Views/FormularioProducto.aspx");
         }
     }
 }

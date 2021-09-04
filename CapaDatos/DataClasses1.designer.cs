@@ -569,7 +569,7 @@ namespace CapaDatos
 		
 		private string _pro_descripcion;
 		
-		private string _pro_imagen;
+		private System.Data.Linq.Binary _pro_imagen;
 		
 		private System.Nullable<int> _cat_id;
 		
@@ -595,7 +595,7 @@ namespace CapaDatos
     partial void Onpro_precioChanged();
     partial void Onpro_descripcionChanging(string value);
     partial void Onpro_descripcionChanged();
-    partial void Onpro_imagenChanging(string value);
+    partial void Onpro_imagenChanging(System.Data.Linq.Binary value);
     partial void Onpro_imagenChanged();
     partial void Oncat_idChanging(System.Nullable<int> value);
     partial void Oncat_idChanged();
@@ -693,8 +693,8 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_imagen", DbType="VarChar(150)")]
-		public string pro_imagen
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_imagen", DbType="VarBinary(150)", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary pro_imagen
 		{
 			get
 			{

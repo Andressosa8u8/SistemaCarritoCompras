@@ -1,14 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Template_Admin/Views/PrincipalAdmin.Master" AutoEventWireup="true" CodeBehind="FormularioProducto.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.FormularioProducto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FormProduct.aspx.cs" Inherits="SistemaCarritoCompras.Templates.Template_Admin.Views.FormProduct" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cph_mensaje" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <div class="card">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="card">
                 <div class="card-header">
                     <h4>Formulario de Productos</h4>
                 </div>
@@ -43,6 +44,6 @@
                     <asp:Button ID="btn_Guardar" CssClass="btn btn-primary" runat="server" OnClick="btn_Guardar_Click" Text="Guardar" />
                 </div>
             </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
-</asp:Content>
+    </form>
+</body>
+</html>

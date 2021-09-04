@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +23,18 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
                 {
                     Response.Redirect("../../../index.aspx");
                 }
+                cargarProducto();
+            }
+        }
+
+        private void cargarProducto()
+        {
+            List<Tbl_Producto> listaPro = new List<Tbl_Producto>();
+            listaPro = Cn_Producto.obtenerProductos();
+            if (listaPro != null)
+            {
+                rptCarrito.DataSource = listaPro;
+                rptCarrito.DataBind();
             }
         }
 

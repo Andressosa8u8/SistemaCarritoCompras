@@ -99,16 +99,12 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 }
 
                 proinfo = new Tbl_Producto();
-                //proinfo.pro_nombre = txt_nomProducto.Text;
-                //proinfo.pro_precio = Convert.ToDouble(txt_preProducto.Text);
-                //proinfo.pro_descripcion = txt_descripcion.Text;
-                ////if (!string.IsNullOrEmpty(FU_imagen.FileName))
-                ////{
-                ////   FU_imagen.SaveAs(Server.MapPath("/Templates/Images/") + FU_imagen.FileName);
-                ////}
+                proinfo.pro_nombre = txt_nomProducto.Text;
+                proinfo.pro_precio = Convert.ToDouble(txt_preProducto.Text);
+                proinfo.pro_descripcion = txt_descripcion.Text;
                 proinfo.pro_imagen = FU_imagen.FileBytes;
-                //proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
-                //proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
+                proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
+                proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 
                 Cn_Producto.save(proinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";

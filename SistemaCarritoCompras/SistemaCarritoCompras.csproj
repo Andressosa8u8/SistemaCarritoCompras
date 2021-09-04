@@ -97,7 +97,6 @@
     <Content Include="Templates\Template_Admin\dist\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Templates\Template_Admin\dist\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Templates\Template_Admin\Views\Categoria.aspx" />
-    <Content Include="Templates\Template_Admin\Views\FormProduct.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioCategoria.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioPedido.aspx" />
     <Content Include="Templates\Template_Admin\Views\FormularioProducto.aspx" />
@@ -261,7 +260,7 @@
     <Content Include="Templates\Template_Principal\layout\styles\framework.css" />
     <Content Include="Templates\Template_Principal\layout\styles\index.html" />
     <Content Include="Templates\Template_Principal\layout\styles\layout.css" />
-    <Content Include="Templates\Template_Principal\Views\Contactenos.aspx" />
+    <Content Include="Templates\Template_Principal\Views\Detalle.aspx" />
     <Content Include="Templates\Template_Principal\Views\Menu.aspx" />
     <Content Include="Templates\Template_Principal\Views\Principal.aspx" />
     <Content Include="Web.config" />
@@ -302,13 +301,6 @@
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\Categoria.aspx.designer.cs">
       <DependentUpon>Categoria.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\Template_Admin\Views\FormProduct.aspx.cs">
-      <DependentUpon>FormProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Templates\Template_Admin\Views\FormProduct.aspx.designer.cs">
-      <DependentUpon>FormProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\Template_Admin\Views\FormularioCategoria.aspx.cs">
       <DependentUpon>FormularioCategoria.aspx</DependentUpon>
@@ -387,12 +379,12 @@
     <Compile Include="Templates\Template_Admin\Views\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Templates\Template_Principal\Views\Contactenos.aspx.cs">
-      <DependentUpon>Contactenos.aspx</DependentUpon>
+    <Compile Include="Templates\Template_Principal\Views\Detalle.aspx.cs">
+      <DependentUpon>Detalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Templates\Template_Principal\Views\Contactenos.aspx.designer.cs">
-      <DependentUpon>Contactenos.aspx</DependentUpon>
+    <Compile Include="Templates\Template_Principal\Views\Detalle.aspx.designer.cs">
+      <DependentUpon>Detalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Templates\Template_Principal\Views\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>

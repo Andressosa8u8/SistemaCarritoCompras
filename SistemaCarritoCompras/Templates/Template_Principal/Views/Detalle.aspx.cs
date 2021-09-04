@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 {
-    public partial class Contactenos1 : System.Web.UI.Page
+    public partial class Detalle : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

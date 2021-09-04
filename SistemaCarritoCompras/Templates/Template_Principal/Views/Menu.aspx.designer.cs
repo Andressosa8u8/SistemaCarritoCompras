@@ -51,60 +51,6 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
-        /// Control ddl_cantidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_cantidad;
-
-        /// <summary>
-        /// Control txt_nombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nombre;
-
-        /// <summary>
-        /// Control txt_precio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_precio;
-
-        /// <summary>
-        /// Control ddl_cantidad2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_cantidad2;
-
-        /// <summary>
-        /// Control txt_nombre2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nombre2;
-
-        /// <summary>
-        /// Control txt_precio2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_precio2;
-
-        /// <summary>
         /// Control img_btn_salteado.
         /// </summary>
         /// <remarks>
@@ -283,5 +229,14 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton img_btn_tiramisu;
+
+        /// <summary>
+        /// Control grvPedidos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grvPedidos;
     }
 }

@@ -81,6 +81,7 @@ namespace CapaNegocio
             var contra = dc.Tbl_Usuario.Single(usu => usu.usu_estado == "A" && usu.usu_correo.Equals(correo));
             return contra;
         }
+
         public static void save(Tbl_Usuario usu)
         {
             try

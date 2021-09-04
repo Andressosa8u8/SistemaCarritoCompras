@@ -15,7 +15,7 @@
                             <!-- ################################################################################################ -->
                             <ul class="nospace">
                                 <li><i class="fas fa-phone rgtspace-5"></i>+593 (02) 256 7890</li>
-                                <li><i class="far fa-envelope rgtspace-5"></i>los7mares@gmail.com</li>
+                                <li><i class="far fa-envelope rgtspace-5"></i>foodnow@gmail.com</li>
                             </ul>
                             <!-- ################################################################################################ -->
                         </div>
@@ -46,7 +46,7 @@
                                         <li><a href="Menu.aspx">Pedido</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="Contactenos.aspx">Contactenos</a></li>
+                                <li><a href="Detalle.aspx">Detalle de Compra</a></li>
                             </ul>
                             <!-- ################################################################################################ -->
                         </nav>

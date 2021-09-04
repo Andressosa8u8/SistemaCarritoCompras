@@ -35,7 +35,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
             int codigo = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Editar")
             {
-                Response.Redirect("~/Templates//Template_Admin/Views/FormProduct.aspx?cod=" + codigo, true);
+                Response.Redirect("~/Templates//Template_Admin/Views/FormularioProducto.aspx?cod=" + codigo, true);
             }
             else if (e.CommandName == "Eliminar")
             {

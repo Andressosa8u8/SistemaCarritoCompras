@@ -42,12 +42,12 @@ namespace CapaDatos
     partial void InsertTbl_Proveedor(Tbl_Proveedor instance);
     partial void UpdateTbl_Proveedor(Tbl_Proveedor instance);
     partial void DeleteTbl_Proveedor(Tbl_Proveedor instance);
-    partial void InsertTbl_Usuario(Tbl_Usuario instance);
-    partial void UpdateTbl_Usuario(Tbl_Usuario instance);
-    partial void DeleteTbl_Usuario(Tbl_Usuario instance);
     partial void InsertTbl_TipoUsuario(Tbl_TipoUsuario instance);
     partial void UpdateTbl_TipoUsuario(Tbl_TipoUsuario instance);
     partial void DeleteTbl_TipoUsuario(Tbl_TipoUsuario instance);
+    partial void InsertTbl_Usuario(Tbl_Usuario instance);
+    partial void UpdateTbl_Usuario(Tbl_Usuario instance);
+    partial void DeleteTbl_Usuario(Tbl_Usuario instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -112,19 +112,19 @@ namespace CapaDatos
 			}
 		}
 		
-		public System.Data.Linq.Table<Tbl_Usuario> Tbl_Usuario
-		{
-			get
-			{
-				return this.GetTable<Tbl_Usuario>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Tbl_TipoUsuario> Tbl_TipoUsuario
 		{
 			get
 			{
 				return this.GetTable<Tbl_TipoUsuario>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_Usuario> Tbl_Usuario
+		{
+			get
+			{
+				return this.GetTable<Tbl_Usuario>();
 			}
 		}
 	}
@@ -569,7 +569,7 @@ namespace CapaDatos
 		
 		private string _pro_descripcion;
 		
-		private System.Data.Linq.Binary _pro_imagen;
+		private string _pro_imagen;
 		
 		private System.Nullable<int> _cat_id;
 		
@@ -595,7 +595,7 @@ namespace CapaDatos
     partial void Onpro_precioChanged();
     partial void Onpro_descripcionChanging(string value);
     partial void Onpro_descripcionChanged();
-    partial void Onpro_imagenChanging(System.Data.Linq.Binary value);
+    partial void Onpro_imagenChanging(string value);
     partial void Onpro_imagenChanged();
     partial void Oncat_idChanging(System.Nullable<int> value);
     partial void Oncat_idChanged();
@@ -693,8 +693,8 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_imagen", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary pro_imagen
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_imagen", DbType="VarChar(100)")]
+		public string pro_imagen
 		{
 			get
 			{
@@ -1054,6 +1054,144 @@ namespace CapaDatos
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_Proveedor = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tbl_TipoUsuario")]
+	public partial class Tbl_TipoUsuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _tusu_id;
+		
+		private string _tusu_nom;
+		
+		private string _tusu_estado;
+		
+		private EntitySet<Tbl_Usuario> _Tbl_Usuario;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ontusu_idChanging(int value);
+    partial void Ontusu_idChanged();
+    partial void Ontusu_nomChanging(string value);
+    partial void Ontusu_nomChanged();
+    partial void Ontusu_estadoChanging(string value);
+    partial void Ontusu_estadoChanged();
+    #endregion
+		
+		public Tbl_TipoUsuario()
+		{
+			this._Tbl_Usuario = new EntitySet<Tbl_Usuario>(new Action<Tbl_Usuario>(this.attach_Tbl_Usuario), new Action<Tbl_Usuario>(this.detach_Tbl_Usuario));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int tusu_id
+		{
+			get
+			{
+				return this._tusu_id;
+			}
+			set
+			{
+				if ((this._tusu_id != value))
+				{
+					this.Ontusu_idChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_id = value;
+					this.SendPropertyChanged("tusu_id");
+					this.Ontusu_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_nom", DbType="VarChar(50)")]
+		public string tusu_nom
+		{
+			get
+			{
+				return this._tusu_nom;
+			}
+			set
+			{
+				if ((this._tusu_nom != value))
+				{
+					this.Ontusu_nomChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_nom = value;
+					this.SendPropertyChanged("tusu_nom");
+					this.Ontusu_nomChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_estado", DbType="VarChar(1)")]
+		public string tusu_estado
+		{
+			get
+			{
+				return this._tusu_estado;
+			}
+			set
+			{
+				if ((this._tusu_estado != value))
+				{
+					this.Ontusu_estadoChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_estado = value;
+					this.SendPropertyChanged("tusu_estado");
+					this.Ontusu_estadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Usuario", Storage="_Tbl_Usuario", ThisKey="tusu_id", OtherKey="tusu_id")]
+		public EntitySet<Tbl_Usuario> Tbl_Usuario
+		{
+			get
+			{
+				return this._Tbl_Usuario;
+			}
+			set
+			{
+				this._Tbl_Usuario.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Tbl_Usuario(Tbl_Usuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_TipoUsuario = this;
+		}
+		
+		private void detach_Tbl_Usuario(Tbl_Usuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_TipoUsuario = null;
 		}
 	}
 	
@@ -1425,144 +1563,6 @@ namespace CapaDatos
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_Usuario = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tbl_TipoUsuario")]
-	public partial class Tbl_TipoUsuario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _tusu_id;
-		
-		private string _tusu_nom;
-		
-		private string _tusu_estado;
-		
-		private EntitySet<Tbl_Usuario> _Tbl_Usuario;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Ontusu_idChanging(int value);
-    partial void Ontusu_idChanged();
-    partial void Ontusu_nomChanging(string value);
-    partial void Ontusu_nomChanged();
-    partial void Ontusu_estadoChanging(string value);
-    partial void Ontusu_estadoChanged();
-    #endregion
-		
-		public Tbl_TipoUsuario()
-		{
-			this._Tbl_Usuario = new EntitySet<Tbl_Usuario>(new Action<Tbl_Usuario>(this.attach_Tbl_Usuario), new Action<Tbl_Usuario>(this.detach_Tbl_Usuario));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int tusu_id
-		{
-			get
-			{
-				return this._tusu_id;
-			}
-			set
-			{
-				if ((this._tusu_id != value))
-				{
-					this.Ontusu_idChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_id = value;
-					this.SendPropertyChanged("tusu_id");
-					this.Ontusu_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_nom", DbType="VarChar(50)")]
-		public string tusu_nom
-		{
-			get
-			{
-				return this._tusu_nom;
-			}
-			set
-			{
-				if ((this._tusu_nom != value))
-				{
-					this.Ontusu_nomChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_nom = value;
-					this.SendPropertyChanged("tusu_nom");
-					this.Ontusu_nomChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_estado", DbType="VarChar(1)")]
-		public string tusu_estado
-		{
-			get
-			{
-				return this._tusu_estado;
-			}
-			set
-			{
-				if ((this._tusu_estado != value))
-				{
-					this.Ontusu_estadoChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_estado = value;
-					this.SendPropertyChanged("tusu_estado");
-					this.Ontusu_estadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Usuario", Storage="_Tbl_Usuario", ThisKey="tusu_id", OtherKey="tusu_id")]
-		public EntitySet<Tbl_Usuario> Tbl_Usuario
-		{
-			get
-			{
-				return this._Tbl_Usuario;
-			}
-			set
-			{
-				this._Tbl_Usuario.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Tbl_Usuario(Tbl_Usuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_TipoUsuario = this;
-		}
-		
-		private void detach_Tbl_Usuario(Tbl_Usuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_TipoUsuario = null;
 		}
 	}
 }

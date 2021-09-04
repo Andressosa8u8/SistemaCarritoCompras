@@ -6,8 +6,8 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>--%>
             <div class="card">
                 <div class="card-header">
                     <h4>Formulario de Productos</h4>
@@ -40,9 +40,9 @@
                 <div class="card-footer text-right">
                     <asp:Button ID="btn_Cancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btn_Cancelar_Click" runat="server" Text="Cancelar" />
                     <asp:Button ID="btn_Modificar" CssClass="btn btn-primary" runat="server" OnClick="btn_Modificar_Click" Text="Modificar" Visible="False" />
-                    <asp:Button ID="btn_Guardar" CssClass="btn btn-primary" runat="server" OnClick="btn_Guardar_Click" Text="Guardar" />
+                    <asp:Button ID="btn_Guardar"  CssClass="btn btn-primary" runat="server" OnClick="btn_Guardar_Click" Text="Guardar" />
                 </div>
             </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+       <%-- </ContentTemplate>
+    </asp:UpdatePanel>--%>
 </asp:Content>

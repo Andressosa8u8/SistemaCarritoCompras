@@ -89,10 +89,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
         }
 
         private void Guardar()
-        {
-            try
-            {
-                if (FU_imagen.HasFile)
+        { if (FU_imagen.HasFile)
                 {
                     Stream fs = FU_imagen.PostedFile.InputStream;
                     BinaryReader br = new System.IO.BinaryReader(fs);
@@ -104,6 +101,9 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Seleccionar un Archivo....!!')", true);
                 }
+            try
+            {
+               
 
                 proinfo = new Tbl_Producto();
                 //proinfo.pro_nombre = txt_nomProducto.Text;
@@ -113,7 +113,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
                 ////{
                 ////   FU_imagen.SaveAs(Server.MapPath("/Templates/Images/") + FU_imagen.FileName);
                 ////}
-                proinfo.pro_imagen = FU_imagen.FileBytes;
+                //proinfo.pro_imagen = FU_imagen.FileBytes;
                 //proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
                 //proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 

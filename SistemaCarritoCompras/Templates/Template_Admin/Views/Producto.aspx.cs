@@ -51,7 +51,7 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 
         protected void btn_agregar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Templates/Template_Admin/Views/FormProduct.aspx");
+            Response.Redirect("~/Templates/Template_Admin/Views/FormularioProducto.aspx");
         }
     }
 }

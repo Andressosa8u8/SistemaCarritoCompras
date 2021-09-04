@@ -83,26 +83,29 @@ namespace SistemaCarritoCompras.Templates.Template_Admin.Views
 
         private void Guardar()
         {
+            //if (FU_imagen.HasFile)
+            //{
+            //    Stream fs = FU_imagen.PostedFile.InputStream;
+            //    BinaryReader br = new System.IO.BinaryReader(fs);
+            //    Byte[] bytes = br.ReadBytes((Int32)fs.Length);
+            //    string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+            //    var Foto = System.Convert.FromBase64String(base64String.ToString());
+            //}
+            //else
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Seleccionar un Archivo....!!')", true);
+            //}
             try
             {
-                if (FU_imagen.HasFile)
-                {
-                    Stream fs = FU_imagen.PostedFile.InputStream;
-                    BinaryReader br = new System.IO.BinaryReader(fs);
-                    Byte[] bytes = br.ReadBytes((Int32)fs.Length);
-                    string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
-                    var Foto = System.Convert.FromBase64String(base64String.ToString());
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Seleccionar un Archivo....!!')", true);
-                }
-
                 proinfo = new Tbl_Producto();
                 proinfo.pro_nombre = txt_nomProducto.Text;
                 proinfo.pro_precio = Convert.ToDouble(txt_preProducto.Text);
                 proinfo.pro_descripcion = txt_descripcion.Text;
-                proinfo.pro_imagen = FU_imagen.FileBytes;
+                if (!string.IsNullOrEmpty(FU_imagen.FileName))
+                {
+                    FU_imagen.SaveAs(Server.MapPath("/Templates/Images/") + FU_imagen.FileName);
+                }
+                proinfo.pro_imagen = FU_imagen.FileName;
                 proinfo.cat_id = Convert.ToInt32(ddl_categoria.Text);
                 proinfo.prov_id = Convert.ToInt32(ddl_proveedor.Text);
 

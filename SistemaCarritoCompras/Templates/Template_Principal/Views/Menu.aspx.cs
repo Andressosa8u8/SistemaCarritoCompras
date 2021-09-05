@@ -43,5 +43,10 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             Session.RemoveAll();
             Response.Redirect("../../../index.aspx");
         }
+
+        protected void img_btn_seleccion_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }

@@ -70,72 +70,74 @@
             <!-- ################################################################################################ -->
             <div class="wrapper row3">
                 <main class="hoc container clear">
-                    <div style="width: 20%; float: right; border-left: 6px orange solid; padding-left: 30px;">
-                        <h3>Tu Pedido</h3>
-                        <br />
-                        <div class="one_quarter first">
-                            <table class="table table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <asp:DropDownList ID="ddl_cantidad" runat="server" Style="border: none">
-                                                <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                                                <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                                <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                                <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                                <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                                            </asp:DropDownList>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="txt_nombre" runat="server" Style="border: none"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="txt_precio" runat="server" Style="border: none"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:DropDownList ID="ddl_cantidad2" runat="server" Style="border: none">
-                                                <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                                                <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                                                <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                                                <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                                                <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                                            </asp:DropDownList>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="txt_nombre2" runat="server" Style="border: none"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="txt_precio2" runat="server" Style="border: none"></asp:TextBox>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button type="button" class="btn btn-warning">Aceptar</button>
+                    <div class="row">
+                        <div class="col-9" id="gallery" style="width: auto; float: left; padding-right: 30px;">
+                            <ul class="nospace group team">
+                                <asp:Repeater ID="rptCarrito" runat="server">
+                                    <ItemTemplate>
+                                        <li class="one_quarter first" style="width: 100%;">
+                                            <figure>
+                                                <asp:ImageButton class="imgover" Style="background: transparent; border: transparent; padding: 20px; width: 275px; height: 200px;"
+                                                    ID="img_btn_seleccion" runat="server" ImageUrl='<%# "~/Templates/Images/" + Eval("pro_imagen") %>' OnClick="img_btn_seleccion_Click" />
+                                                <div style="width: 60%; float: left; padding: 20px;">
+                                                    <br />
+                                                    <h3><%#Eval("pro_nombre")%></h3>
+                                                    <br />
+                                                    <br />
+                                                    <h3><%#Eval("pro_precio")%></h3>
+                                                </div>
+                                            </figure>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
                         </div>
-                    </div>
-                    <div id="gallery" style="width: 80%; float: left; padding-right: 30px;">
-                        <ul class="nospace group team">
-                            <asp:Repeater ID="rptCarrito" runat="server">
-                                <ItemTemplate>
-                                    <li class="one_quarter first" style="width: 100%;">
-                                        <figure>
-                                            <asp:ImageButton class="imgover" Style="background: transparent; border: transparent; padding: 20px; width: 275px; height: 200px;"
-                                                ID="img_btn_salteado" runat="server" ImageUrl='<%# "~/Templates/Images/" + Eval("pro_imagen") %>' />
-                                            <div style="width: 60%; float: left; padding: 20px;">
-                                                <br />
-                                                <h3><%#Eval("pro_nombre")%></h3>
-                                                <br />
-                                                <br />
-                                                <h3><%#Eval("pro_precio")%></h3>
-                                            </div>
-                                        </figure>
-                                    </li>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </ul>
+                        <div class="col-3" style="width: auto; float: right; border-left: 6px orange solid; padding-left: 30px;">
+                            <h3>Tu Pedido</h3>
+                            <br />
+                            <div class="one_quarter first">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <asp:DropDownList ID="ddl_cantidad" runat="server" Style="border: none">
+                                                    <asp:ListItem Value="1" Text="1"></asp:ListItem>
+                                                    <asp:ListItem Value="2" Text="2"></asp:ListItem>
+                                                    <asp:ListItem Value="3" Text="3"></asp:ListItem>
+                                                    <asp:ListItem Value="4" Text="4"></asp:ListItem>
+                                                    <asp:ListItem Value="5" Text="5"></asp:ListItem>
+                                                </asp:DropDownList>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="txt_nombre" runat="server" Style="border: none"></asp:TextBox>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="txt_precio" runat="server" Style="border: none"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:DropDownList ID="ddl_cantidad2" runat="server" Style="border: none">
+                                                    <asp:ListItem Value="1" Text="1"></asp:ListItem>
+                                                    <asp:ListItem Value="2" Text="2"></asp:ListItem>
+                                                    <asp:ListItem Value="3" Text="3"></asp:ListItem>
+                                                    <asp:ListItem Value="4" Text="4"></asp:ListItem>
+                                                    <asp:ListItem Value="5" Text="5"></asp:ListItem>
+                                                </asp:DropDownList>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="txt_nombre2" runat="server" Style="border: none"></asp:TextBox>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="txt_precio2" runat="server" Style="border: none"></asp:TextBox>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-warning">Aceptar</button>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>

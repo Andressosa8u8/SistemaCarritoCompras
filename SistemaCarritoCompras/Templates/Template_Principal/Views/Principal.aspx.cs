@@ -32,7 +32,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void lbn_carrito_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Detalle.aspx");
         }
     }
 }

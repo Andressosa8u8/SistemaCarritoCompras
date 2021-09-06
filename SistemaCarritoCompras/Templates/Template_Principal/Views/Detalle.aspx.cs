@@ -31,7 +31,8 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
                 {
                     Response.Redirect("../../../index.aspx");
                 }
-
+                lblFecha.Text = DateTime.Now.Date.ToString().Substring(0, 10);
+                cargarcarrito();
             }
         }
 
@@ -43,7 +44,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void lbn_carrito_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Detalle.aspx");
         }
 
         protected void btnActualizar_Click(object sender, EventArgs e)
@@ -68,10 +69,10 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
                 {
                     if (dr["pro_id"].ToString() == cod.ToString())
                     {
-                        dr["canproducto"] = cant;
+                        //dr["canproducto"] = cant;
                         dr["subtotal"] = subtotal;
-                    }
                 }
+            }
 
                 total = total + subtotal;
             }
@@ -92,22 +93,23 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
         protected void btnCompra_Click(object sender, EventArgs e)
         {
             pedinfo = new Tbl_Pedido();
-            pedinfo.ped_fecha = Convert.ToDateTime(lblFecha.Text);
             pedinfo.ped_precio = double.Parse(lblSubTotal.Text);
             pedinfo.ped_precioTotal = double.Parse(lblTotal.Text);
-            pedinfo.usu_id = Convert.ToInt32( lblCliente.Text);
+            pedinfo.usu_id = int.Parse(lblCliente.Text);
             Cn_Pedido.save(pedinfo);
 
-            foreach (GridViewRow row in grvDetalle.Rows)
-            {
-                pedinfo.ped_cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("txtCantidad")).Text);
-                pedinfo.ped_precio = double.Parse(Convert.ToString(row.Cells[3].Text));
-                pedinfo.ped_precioTotal = double.Parse(Convert.ToString(row.Cells[5].Text));
-                Cn_Pedido.save(pedinfo);
-            }
-            SendEmail(sender, e);
-            this.Response.Write("<script language='JavaScript'>window.alert('PROCESO TERMINADO CORRECTAMENTE')</script>");
-            Response.Redirect("Carrito_Compra.aspx");
+            //foreach (GridViewRow row in grvDetalle.Rows)
+            //{
+            //    pedinfo.ped_cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("txtCantidad")).Text);
+            //    pedinfo.ped_precio = double.Parse(Convert.ToString(row.Cells[3].Text));
+            //    pedinfo.ped_precioTotal = double.Parse(Convert.ToString(row.Cells[5].Text));
+            //    pedinfo.pro_id = Convert.ToInt32(row.Cells[1].Text);
+            //    Cn_Pedido.save(pedinfo);
+            //}
+            //SendEmail(sender, e);
+            string js1 = "alert('Su compra fue realizada Con Exito..')";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
+            Response.Redirect("Principal.aspx");
         }
 
         protected void grvDetalle_RowCommand(object sender, GridViewCommandEventArgs e)

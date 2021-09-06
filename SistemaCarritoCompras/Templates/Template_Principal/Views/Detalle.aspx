@@ -75,7 +75,7 @@
             <div class="container">
         <div class="row">
             <div class="col">
-                <table class="table-responsive">
+                <table class="table table-hover text-center">
         <tr>
             <td colspan="3" style="text-align: center">
                 <h1>Carrito de compras</h1></td>
@@ -93,7 +93,7 @@
             <td style="width: 77px">
                 <strong>Fecha :</strong></td>
             <td style="width: 397px">
-                <asp:Label ID="lblFecha" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblFecha" runat="server" Text=""></asp:Label>
             </td>
             <td>
                 &nbsp;</td>
@@ -132,7 +132,7 @@
             <td colspan="2">
                 <asp:GridView ID="grvDetalle" runat="server" AutoGenerateColumns="False" Width="505px"
                     OnRowCommand="grvDetalle_RowCommand" OnRowDeleting="grvDetalle_RowDeleting"
-                    CssClass="table-responsive">
+                    CssClass="table table-hover text-center">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" HeaderText="Editar" />
                         <asp:BoundField DataField="pro_id" HeaderText="Codigo" />
@@ -143,7 +143,7 @@
                                 <asp:TextBox ID="txtCantidad" runat="server" Height="19px" Width="73px">1</asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="subtotal" HeaderText="Sub Total" />
+                        <asp:BoundField DataField="subtotal" HeaderText="Total" />
                     </Columns>
                 </asp:GridView>
             </td>
@@ -160,8 +160,8 @@
             <td style="width: 77px">
                 &nbsp;</td>
             <td style="width: 397px; text-align: right">
-                SubTotal S/ :&nbsp;
-                <asp:Label ID="lblSubTotal" runat="server" Text="Label"></asp:Label>
+                SubTotal $ :&nbsp;
+                <asp:Label ID="lblSubTotal" runat="server" Text=""></asp:Label>
             </td>
             <td>
                 &nbsp;</td>
@@ -170,8 +170,8 @@
             <td style="width: 77px">
                 &nbsp;</td>
             <td style="width: 397px; text-align: right">
-                IGV S/ :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblIGV" runat="server" Text="Label"></asp:Label>
+                IVA $ :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblIGV" runat="server" Text=""></asp:Label>
             </td>
             <td>
                 &nbsp;</td>
@@ -180,8 +180,8 @@
             <td style="width: 77px">
                 &nbsp;</td>
             <td style="width: 397px; text-align: right">
-                Total S/ :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblTotal" runat="server" Text="Label"></asp:Label>
+                Total $ :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
             </td>
             <td>
                 &nbsp;</td>

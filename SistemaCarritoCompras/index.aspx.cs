@@ -54,7 +54,7 @@ namespace SistemaCarritoCompras
                         {
                             Session["Usuario"] = usu.tusu_id.ToString();
                             Session["nombre"] = usu.usu_nombres.ToString();
-                            Session["usuId"] = usu.usu_nombres.ToString();
+                            Session["usuId"] = usu.usu_id.ToString();
                             Session["email"] = usu.usu_correo.ToString();
                             Response.Redirect("~/Templates/Template_Principal/Views/Principal.aspx");
                             Limpiar();

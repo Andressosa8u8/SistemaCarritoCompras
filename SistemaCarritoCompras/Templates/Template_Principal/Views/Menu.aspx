@@ -80,6 +80,10 @@
                         <asp:Image ID="Image1" Width="140" Height="120" runat="server" ImageUrl='<%# "~/Templates/Images/"+Eval("pro_imagen") %>' CssClass="img-fluid" />
                         <br />
                         <br />
+                        Código :
+                        <asp:Label ID="lbn_id" runat="server" Text='<%# Eval("pro_id") %>' />
+                        <br />
+                        <br />
                         Producto :
                                     <asp:Label ID="lbn_nombre" runat="server" Text='<%# Eval("pro_nombre") %>' />
                         <br />

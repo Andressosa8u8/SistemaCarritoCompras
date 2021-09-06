@@ -37,6 +37,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             if (Session["pedido"] == null)
             {
                 dtb = new DataTable("Carrito");
+                dtb.Columns.Add("pro_id", System.Type.GetType("System.Int32"));
                 dtb.Columns.Add("pro_nombre", System.Type.GetType("System.String"));
                 dtb.Columns.Add("pro_precio", System.Type.GetType("System.Double"));
                 dtb.Columns.Add("subtotal", System.Type.GetType("System.Double"));
@@ -52,16 +53,16 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         }
 
-        public void AgregarItem(string nom, double precio)
+        public void AgregarItem(int cod,string nom, double precio)
         {
             double total;
             int cantidad = 1;
             total = precio * cantidad;
             carrito = (DataTable)Session["pedido"];
             DataRow fila = carrito.NewRow();
-            fila[0] = nom;
-            fila[1] = precio;
-            fila[2] = (int)cantidad;
+            fila[0] = cod;
+            fila[1] = nom;
+            fila[2] = precio;
             fila[3] = total;
             carrito.Rows.Add(fila);
             Session["pedido"] = carrito;
@@ -69,15 +70,16 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
+            int cod;
             string nom = null;
             double precio = 0;
             if (e.CommandName == "Seleccionar")
             {
                 DataList1.SelectedIndex = e.Item.ItemIndex;
-
+                cod = Int32.Parse(((Label)this.DataList1.SelectedItem.FindControl("lbn_id")).Text);
                 nom = ((Label)this.DataList1.SelectedItem.FindControl("lbn_nombre")).Text;                
                 precio = double.Parse(((Label)this.DataList1.SelectedItem.FindControl("lbn_precio")).Text);
-                AgregarItem(nom, precio);
+                AgregarItem(cod,nom, precio);
 
 
 
@@ -89,7 +91,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void lbn_carrito_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Detalle.aspx");
         }
 
         protected void lnbCerrarSession_Click(object sender, EventArgs e)

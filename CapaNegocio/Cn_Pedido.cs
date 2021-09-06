@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo traer para pedidos
         public static List<Tbl_Pedido> obtenerPedido()
         {
-            var lista = dc.Tbl_Pedido.Where(ped => ped.ped_estado == "A" || ped.ped_estado == "C");
+            var lista = dc.Tbl_Pedido.Where(ped => ped.ped_estado == "A");
             return lista.ToList();
         }
 
@@ -49,7 +49,7 @@ namespace CapaNegocio
 
         public static Tbl_Pedido obtenerPedidoxId(int id)
         {
-            var pedid = dc.Tbl_Pedido.FirstOrDefault(ped => ped.ped_id.Equals(id) && ped.ped_estado == "A" || ped.ped_estado == "C");
+            var pedid = dc.Tbl_Pedido.FirstOrDefault(ped => ped.ped_id.Equals(id) && ped.ped_estado == "A");
             return pedid;
         }
 
@@ -58,6 +58,7 @@ namespace CapaNegocio
             try
             {
                 ped.ped_estado = "A";
+                ped.ped_fecha = DateTime.Now;
                 dc.Tbl_Pedido.InsertOnSubmit(ped);
                 dc.SubmitChanges();
             }
@@ -71,7 +72,6 @@ namespace CapaNegocio
         {
             try
             {
-                ped.ped_estado = "C";
                 dc.SubmitChanges();
             }
             catch (Exception ex)

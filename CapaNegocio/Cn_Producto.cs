@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo para retornar todos las categorias
         public static List<Tbl_Producto> obtenerProductos()
         {
-            var lista = dc.Tbl_Producto.Where(pro => pro.pro_estado == "A" || pro.pro_estado == "C");
+            var lista = dc.Tbl_Producto.Where(pro => pro.pro_estado == "A");
             return lista.ToList();
         }
 
@@ -35,7 +35,7 @@ namespace CapaNegocio
 
         public static Tbl_Producto obtenerProductoxId(int id)
         {
-            var proid = dc.Tbl_Producto.FirstOrDefault(pro => pro.pro_id.Equals(id) && pro.pro_estado == "A" || pro.pro_estado == "C");
+            var proid = dc.Tbl_Producto.FirstOrDefault(pro => pro.pro_id.Equals(id) && pro.pro_estado == "A");
             return proid;
         }
 

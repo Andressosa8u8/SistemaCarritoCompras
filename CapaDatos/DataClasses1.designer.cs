@@ -281,6 +281,8 @@ namespace CapaDatos
 		
 		private System.Nullable<double> _ped_precioTotal;
 		
+		private System.Nullable<System.DateTime> _ped_fecha;
+		
 		private System.Nullable<int> _pro_id;
 		
 		private System.Nullable<int> _usu_id;
@@ -303,6 +305,8 @@ namespace CapaDatos
     partial void Onped_precioChanged();
     partial void Onped_precioTotalChanging(System.Nullable<double> value);
     partial void Onped_precioTotalChanged();
+    partial void Onped_fechaChanging(System.Nullable<System.DateTime> value);
+    partial void Onped_fechaChanged();
     partial void Onpro_idChanging(System.Nullable<int> value);
     partial void Onpro_idChanged();
     partial void Onusu_idChanging(System.Nullable<int> value);
@@ -394,6 +398,26 @@ namespace CapaDatos
 					this._ped_precioTotal = value;
 					this.SendPropertyChanged("ped_precioTotal");
 					this.Onped_precioTotalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ped_fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ped_fecha
+		{
+			get
+			{
+				return this._ped_fecha;
+			}
+			set
+			{
+				if ((this._ped_fecha != value))
+				{
+					this.Onped_fechaChanging(value);
+					this.SendPropertyChanging();
+					this._ped_fecha = value;
+					this.SendPropertyChanged("ped_fecha");
+					this.Onped_fechaChanged();
 				}
 			}
 		}
@@ -761,7 +785,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_estado", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pro_estado", DbType="VarChar(1)")]
 		public string pro_estado
 		{
 			get

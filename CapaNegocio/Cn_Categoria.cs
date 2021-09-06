@@ -15,13 +15,13 @@ namespace CapaNegocio
         //metodo para retornar todos los responsables
         public static List<Tbl_Categoria> obtenerCategorias()
         {
-            var lista = dc.Tbl_Categoria.Where(cat => cat.cat_estado == "A" || cat.cat_estado == "C");
+            var lista = dc.Tbl_Categoria.Where(cat => cat.cat_estado == "A");
             return lista.ToList();
         }
 
         public static Tbl_Categoria obtenerCategoriaxId(int id)
         {
-            var catid = dc.Tbl_Categoria.FirstOrDefault(cat => cat.cat_id.Equals(id) && cat.cat_estado == "A" || cat.cat_estado == "C");
+            var catid = dc.Tbl_Categoria.FirstOrDefault(cat => cat.cat_id.Equals(id) && cat.cat_estado == "A");
             return catid;
         }
 
@@ -55,7 +55,6 @@ namespace CapaNegocio
         {
             try
             {
-                cat.cat_estado = "C";
                 dc.SubmitChanges();
             }
             catch (Exception ex)

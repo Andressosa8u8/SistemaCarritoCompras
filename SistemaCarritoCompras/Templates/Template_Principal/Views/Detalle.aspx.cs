@@ -29,5 +29,10 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             Session.RemoveAll();
             Response.Redirect("../../../index.aspx");
         }
+
+        protected void lbn_carrito_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

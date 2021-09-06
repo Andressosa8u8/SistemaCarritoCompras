@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo para retornar todos los responsables
         public static List<Tbl_Usuario> obtenerUsuarios()
         {
-            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == "A" || usu.usu_estado == "C");
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == "A");
             return lista.ToList();
         }
 

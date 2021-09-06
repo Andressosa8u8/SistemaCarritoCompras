@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo para retornar todos las categorias
         public static List<Tbl_Proveedor> obtenerProveedores()
         {
-            var lista = dc.Tbl_Proveedor.Where(prov => prov.prov_estado == "A" || prov.prov_estado == "C");
+            var lista = dc.Tbl_Proveedor.Where(prov => prov.prov_estado == "A");
             return lista.ToList();
         }
 

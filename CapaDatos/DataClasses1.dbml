@@ -14,6 +14,7 @@
       <Column Name="ped_cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ped_precio" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="ped_precioTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ped_fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="pro_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="usu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ped_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
@@ -30,7 +31,7 @@
       <Column Name="pro_imagen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="cat_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="prov_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="pro_estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pro_estado" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
       <Association Name="Tbl_Producto_Tbl_Pedido" Member="Tbl_Pedido" ThisKey="pro_id" OtherKey="pro_id" Type="Tbl_Pedido" />
       <Association Name="Tbl_Categoria_Tbl_Producto" Member="Tbl_Categoria" ThisKey="cat_id" OtherKey="cat_id" Type="Tbl_Categoria" IsForeignKey="true" />
       <Association Name="Tbl_Proveedor_Tbl_Producto" Member="Tbl_Proveedor" ThisKey="prov_id" OtherKey="prov_id" Type="Tbl_Proveedor" IsForeignKey="true" />

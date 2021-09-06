@@ -84,7 +84,7 @@
                                                     <h3><%#Eval("pro_nombre")%></h3>
                                                     <br />
                                                     <br />
-                                                    <h3><%#Eval("pro_precio")%></h3>
+                                                    <h3>$<%#Eval("pro_precio")%></h3>
                                                 </div>
                                             </figure>
                                         </li>

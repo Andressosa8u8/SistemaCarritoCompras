@@ -23,7 +23,9 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
                     string usulogeado = Session["Usuario"].ToString();
                     string usuId = Session["usuId"].ToString();
                     string nombre = Session["nombre"].ToString();
+                    string email = Session["email"].ToString();
                     lblCliente.Text = nombre;
+                    lblEmail.Text = email;
                 }
                 else
                 {
@@ -89,7 +91,6 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void btnCompra_Click(object sender, EventArgs e)
         {
-            Pedidos();
             oMatriculaCE.Codigo = txtCodigo.Text;
             oMatriculaCE.Fecha = lblFecha.Text;
             oMatriculaCE.Subtotal = decimal.Parse(lblSubTotal.Text);
@@ -98,12 +99,12 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             oMatriculaCE.Cliente = lblCliente.Text;
             oMatriculaCN.Insertar(oMatriculaCE);
 
-            foreach (GridViewRow row in GridView1.Rows)
+            foreach (GridViewRow row in grvDetalle.Rows)
             {
                 ComponenteNegocio.DetalleVentaCN oMatriculaCNN = new ComponenteNegocio.DetalleVentaCN();
                 ComponenteEntidad.DetalleVenta oMatriculaCEE = new ComponenteEntidad.DetalleVenta();
                 oMatriculaCEE.Codigo = txtCodigo.Text;
-                oMatriculaCEE.Cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("TextBox1")).Text);
+                oMatriculaCEE.Cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("txtCantidad")).Text);
                 oMatriculaCEE.Precio = decimal.Parse(Convert.ToString(row.Cells[3].Text));
                 oMatriculaCEE.Subtotal = decimal.Parse(Convert.ToString(row.Cells[5].Text));
                 oMatriculaCEE.Codproducto = Convert.ToString(row.Cells[1].Text);
@@ -163,6 +164,59 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
         private void Pedidos(int cantidad,Decimal precio,Decimal total, string fecha, string codproducto, string cliente,char estado)
         {
             var query = dc.Pedidos(cantidad,precio,total,fecha,codproducto,cliente,estado);
+        }
+        protected void SendEmail(object sender, EventArgs e)
+        {
+            System.Net.Mail.MailMessage correo = new System.Net.Mail.MailMessage();
+            correo.From = new System.Net.Mail.MailAddress("anderlion");
+            correo.To.Add(this.lblEmail.Text);
+            correo.Subject = "Pedido de Compra";
+
+            string cod, des;
+            int cant;
+            var items = (DataTable)Session["pedido"];
+            decimal total, prec, subtotal, igv;
+            des = "";
+            for (int i = 0; i < grvDetalle.Rows.Count; i++)
+            {
+                cod = (grvDetalle.Rows[i].Cells[1].Text);
+                //\
+                cant = System.Convert.ToInt16(((TextBox)this.grvDetalle.Rows[i].Cells[0].FindControl("TextBox1")).Text);
+                prec = Decimal.Parse(grvDetalle.Rows[i].Cells[3].Text);
+                des += "\r\n" + (grvDetalle.Rows[i].Cells[2].Text) + " " + "(" + cant + ")" + " " + Convert.ToString(prec) + "\r\n";
+                //Actualiza la canasta
+
+                foreach (DataRow objDR in items.Rows)
+                {
+                    if (objDR["codproducto"].ToString() == cod)
+                    {
+                        break;
+                    }
+                }
+
+            }
+
+            correo.Body = "Hola " + lblCliente.Text + " Usted ha realizado un pedido por la cantidad de : S/. " + lblTotal.Text + "\r\n" + des;
+
+            correo.IsBodyHtml = false;
+            correo.Priority = System.Net.Mail.MailPriority.Normal;
+            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient();
+            //smtp.Host = "smtp.gmail.com";  //'para gmail
+            smtp.Host = "smtp.live.com"; //para hotmail
+            smtp.Port = 587;
+            smtp.Credentials = new System.Net.NetworkCredential("tu correo", "y clave");
+            smtp.EnableSsl = true;
+            try
+            {
+                smtp.Send(correo);
+                this.Response.Write("<script language='JavaScript'>window.alert('Venta Enviada Correctamente')</script>");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error: (" + ex.Message + ")");
+            }
+
+
         }
     }
 }

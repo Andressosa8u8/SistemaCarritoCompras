@@ -53,6 +53,8 @@ namespace SistemaCarritoCompras
                         else if (tusuario == 2)
                         {
                             Session["Usuario"] = usu.tusu_id.ToString();
+                            Session["nombre"] = usu.usu_nombres.ToString();
+                            Session["usuId"] = usu.usu_nombres.ToString();
                             Response.Redirect("~/Templates/Template_Principal/Views/Principal.aspx");
                             Limpiar();
                         }

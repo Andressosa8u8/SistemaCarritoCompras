@@ -87,13 +87,15 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             }
         }
 
+        protected void lbn_carrito_Click(object sender, EventArgs e)
+        {
+
+        }
+
         protected void lnbCerrarSession_Click(object sender, EventArgs e)
         {
             Session.RemoveAll();
             Response.Redirect("../../../index.aspx");
         }
-
-
-
     }
 }

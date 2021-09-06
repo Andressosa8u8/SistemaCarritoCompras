@@ -23,7 +23,7 @@
                             <!-- ################################################################################################ -->
                             <ul class="nospace">
                                 <li><a href="Principal.aspx"><i class="fas fa-home" style="color: orange"></i></a></li>
-                                <asp:LinkButton ID="lnbCerrarSession" OnClick="lnbCerrarSession_Click1" runat="server">
+                                <asp:LinkButton ID="lnbCerrarSession" OnClick="lnbCerrarSession_Click" runat="server">
                                         <i class="fas fa-sign-in-alt" style="color: orange"></i>
                                 </asp:LinkButton>
                             </ul>
@@ -48,7 +48,7 @@
                                 </li>
                                 <li><a href="Detalle.aspx">Detalle de Compra</a></li>
                                 <li>
-                                    <asp:LinkButton ID="lbn_carrito" OnClick="" runat="server">
+                                    <asp:LinkButton ID="lbn_carrito" OnClick="lbn_carrito_Click" runat="server">
                                         <i class="fas fa-cart-arrow-down" style="color: white"></i>
                                     </asp:LinkButton>
                                 </li>

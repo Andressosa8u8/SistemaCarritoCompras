@@ -12,7 +12,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 {
     public partial class Detalle : System.Web.UI.Page
     {
-        DataClasses1DataContext dc = new DataClasses1DataContext();
+        Tbl_Pedido pedinfo = new Tbl_Pedido();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
                     string usuId = Session["usuId"].ToString();
                     string nombre = Session["nombre"].ToString();
                     string email = Session["email"].ToString();
-                    lblCliente.Text = nombre;
+                    lblCliente.Text = usuId;
                     lblEmail.Text = email;
                 }
                 else
@@ -91,24 +91,19 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
 
         protected void btnCompra_Click(object sender, EventArgs e)
         {
-            oMatriculaCE.Codigo = txtCodigo.Text;
-            oMatriculaCE.Fecha = lblFecha.Text;
-            oMatriculaCE.Subtotal = decimal.Parse(lblSubTotal.Text);
-            oMatriculaCE.Igv = decimal.Parse(lblIGV.Text);
-            oMatriculaCE.Total = decimal.Parse(lblTotal.Text);
-            oMatriculaCE.Cliente = lblCliente.Text;
-            oMatriculaCN.Insertar(oMatriculaCE);
+            pedinfo = new Tbl_Pedido();
+            pedinfo.ped_fecha = Convert.ToDateTime(lblFecha.Text);
+            pedinfo.ped_precio = double.Parse(lblSubTotal.Text);
+            pedinfo.ped_precioTotal = double.Parse(lblTotal.Text);
+            pedinfo.usu_id = Convert.ToInt32( lblCliente.Text);
+            Cn_Pedido.save(pedinfo);
 
             foreach (GridViewRow row in grvDetalle.Rows)
             {
-                ComponenteNegocio.DetalleVentaCN oMatriculaCNN = new ComponenteNegocio.DetalleVentaCN();
-                ComponenteEntidad.DetalleVenta oMatriculaCEE = new ComponenteEntidad.DetalleVenta();
-                oMatriculaCEE.Codigo = txtCodigo.Text;
-                oMatriculaCEE.Cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("txtCantidad")).Text);
-                oMatriculaCEE.Precio = decimal.Parse(Convert.ToString(row.Cells[3].Text));
-                oMatriculaCEE.Subtotal = decimal.Parse(Convert.ToString(row.Cells[5].Text));
-                oMatriculaCEE.Codproducto = Convert.ToString(row.Cells[1].Text);
-                oMatriculaCNN.Insertar(oMatriculaCEE);
+                pedinfo.ped_cantidad = int.Parse(((TextBox)row.Cells[4].FindControl("txtCantidad")).Text);
+                pedinfo.ped_precio = double.Parse(Convert.ToString(row.Cells[3].Text));
+                pedinfo.ped_precioTotal = double.Parse(Convert.ToString(row.Cells[5].Text));
+                Cn_Pedido.save(pedinfo);
             }
             SendEmail(sender, e);
             this.Response.Write("<script language='JavaScript'>window.alert('PROCESO TERMINADO CORRECTAMENTE')</script>");
@@ -161,10 +156,11 @@ namespace SistemaCarritoCompras.Templates.Template_Principal.Views
             return tot;
         }
 
-        private void Pedidos(int cantidad,Decimal precio,Decimal total, string fecha, string codproducto, string cliente,char estado)
-        {
-            var query = dc.Pedidos(cantidad,precio,total,fecha,codproducto,cliente,estado);
-        }
+        //private void Pedidos(int cantidad,Decimal precio,Decimal total, string fecha, string codproducto, string cliente,char estado)
+        //{
+        //    var query = dc.Pedidos(cantidad,precio,total,fecha,codproducto,cliente,estado);
+        //}
+
         protected void SendEmail(object sender, EventArgs e)
         {
             System.Net.Mail.MailMessage correo = new System.Net.Mail.MailMessage();
